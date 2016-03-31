@@ -65,7 +65,13 @@ module.exports.sass = {
     `!${DIR.SRC}/**/_**/*.{sass,scss}`,
     `!${DIR.SRC}/**/_*.{sass,scss}`
   ],
-  dest: `${DIR.DEST}${DIR.PATH}/css`
+  dest: `${DIR.DEST}${DIR.PATH}/css`,
+  browsers: [
+    'last 2 versions',
+    'ie >= 9',
+    'Android >= 4',
+    'ios_saf >= 8',
+  ]
 };
 
 module.exports.minifyCss = {

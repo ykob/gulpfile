@@ -23,6 +23,7 @@
     "envify": "^3.4.0",
     "event-stream": "^3.3.2",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-filelist": "^0.3.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
