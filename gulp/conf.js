@@ -105,11 +105,11 @@ module.exports.clean = {
 };
 
 module.exports.filelist = {
-  src: [
-    `${DIR.DEST}${DIR.PATH}/img/**/*.gif`,
-    `${DIR.DEST}${DIR.PATH}/img/**/*.jpg`,
-    `${DIR.DEST}${DIR.PATH}/img/**/*.png`,
-  ],
-  temp: `${DIR.DEST}${DIR.PATH}/json_temp/`,
-  dest: `${DIR.DEST}${DIR.PATH}/json/`
+  src: `${DIR.DEST}${DIR.PATH}/img/`,
+  option: {
+    flatten: true
+  },
+  entry: [
+    `common`
+  ]
 };
