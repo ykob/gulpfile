@@ -1,3 +1,4 @@
+- var website_domain = "http://www.tplh.net"
 - var website_name = ""
 - var meta_title_merge = ""
 - var meta_keywords_base = ""
@@ -35,10 +36,10 @@ meta(property="og:title", content="#{meta_title_merge}")
 meta(property="og:site_name", content="#{website_name}")
 meta(property="og:type", content="website")
 meta(property="og:description", content="#{meta_ogp_description}")
-meta(property="og:url", content="http://weekend-sendai.com#{meta_path}")
-meta(property="og:image", content="/img/common/#{meta_ogp_img}")
+meta(property="og:url", content="#{website_domain}#{meta_path}")
+meta(property="og:image", content="#{website_domain}/img/common/#{meta_ogp_img}")
 
 meta(name="twitter:card", content="summary_large_image")
 meta(name="twitter:title", content="#{meta_title_merge}")
 meta(name="twitter:description", content="#{meta_ogp_description}")
-meta(name="twitter:image", content="/img/common/#{meta_ogp_img}")
+meta(name="twitter:image", content="#{website_domain}/img/common/#{meta_ogp_img}")
