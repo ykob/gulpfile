@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 
 const $ = require('../plugins');
-const conf = require('../conf').minifyCss;
+const conf = require('../conf').minify_css;
 
 gulp.task('minify-css', () => {
   return gulp.src(conf.src)
