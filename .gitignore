@@ -4,4 +4,5 @@ dst/css/**/*
 dst/js/**/*
 dst/**/*.json
 dst/**/*.html
+build/**/*
 .sass-cache
