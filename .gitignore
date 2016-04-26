@@ -2,6 +2,6 @@ node_modules
 ignore
 dst/css/**/*
 dst/js/**/*
-dst/json/**/*
+dst/**/*.json
 dst/**/*.html
 .sass-cache
