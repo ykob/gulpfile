@@ -38,11 +38,11 @@ module.exports.scripts = {
   dest: `${DIR.DEST}${DIR.PATH}/js`
 };
 
-module.exports.jade = {
+module.exports.pug = {
   src: [
-    `${DIR.SRC}/**/*.jade`,
-    `!${DIR.SRC}/**/_**/*.jade`,
-    `!${DIR.SRC}/**/_*.jade`
+    `${DIR.SRC}/**/*.pug`,
+    `!${DIR.SRC}/**/_**/*.pug`,
+    `!${DIR.SRC}/**/_*.pug`
   ],
   dest: `${DIR.DEST}${DIR.PATH}`,
   opts: {

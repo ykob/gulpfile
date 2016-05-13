@@ -11,7 +11,7 @@ requireDir('./gulp/tasks');
 gulp.task('predefault', cb => {
   runSequence(
     'filelist',
-    ['jade', 'sass', 'watchify', 'copy-vendor-script'],
+    ['pug', 'sass', 'watchify', 'copy-vendor-script'],
     'serve',
     cb
   );
@@ -19,8 +19,8 @@ gulp.task('predefault', cb => {
 
 gulp.task('default', ['predefault'], () => {
   gulp.watch(
-    [`./${DIR.SRC}/**/*.jade`],
-    ['jade', reload]
+    [`./${DIR.SRC}/**/*.pug`],
+    ['pug', reload]
   );
 
   gulp.watch(
@@ -38,7 +38,7 @@ gulp.task('build', cb => {
   runSequence(
     'clean',
     'filelist',
-    ['jade', 'sass'],
+    ['pug', 'sass'],
     'replace-html',
     ['minify-css', 'browserify', 'imagemin'],
     'uglify',
