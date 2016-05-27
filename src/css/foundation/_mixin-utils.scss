@@ -34,3 +34,28 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+//
+// cited bootstrap break point
+// http://getbootstrap.com/css/#grid-options
+//
+@mixin l-lg {
+  @media all and (min-width: $break-point-lg) {
+    @content;
+  }
+}
+@mixin l-md {
+  @media all and (min-width: $break-point-md) and (max-width: $break-point-lg) {
+    @content;
+  }
+}
+@mixin l-sm {
+  @media all and (min-width: $break-point-sm) and (max-width: $break-point-md) {
+    @content;
+  }
+}
+@mixin l-xs {
+  @media all and (max-width: $break-point-sm) {
+    @content;
+  }
+}
