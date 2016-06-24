@@ -10,7 +10,6 @@ requireDir('./gulp/tasks');
 
 gulp.task('predefault', cb => {
   runSequence(
-    'filelist',
     ['pug', 'sass', 'watchify', 'copy-vendor-script'],
     'serve',
     cb
@@ -37,13 +36,11 @@ gulp.task('default', ['predefault'], () => {
 gulp.task('build', cb => {
   runSequence(
     'clean',
-    'filelist',
     ['pug', 'sass'],
     'replace-html',
     ['minify-css', 'browserify', 'imagemin'],
     'uglify',
     'copy-vendor-script-to-build',
-    'copy-filelist-to-build',
     cb
   );
 });

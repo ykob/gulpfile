@@ -50,7 +50,6 @@ module.exports.pug = {
   }
 };
 
-
 module.exports.sass = {
   src: [
     `${DIR.SRC}/**/*.{sass,scss}`,
@@ -109,24 +108,6 @@ module.exports.imagemin = {
   ],
   dest: `${DIR.BUILD}${DIR.PATH}/img`
 };
-
-module.exports.filelist = {
-  src: `${DIR.DEST}${DIR.PATH}/img/`,
-  option: {
-    flatten: true
-  },
-  entry: [
-    `common`
-  ]
-};
-
-module.exports.copy_filelist_to_build = {
-  src: [
-    `${DIR.DEST}${DIR.PATH}/img/**/filelist.json`,
-  ],
-  dest: `${DIR.BUILD}${DIR.PATH}/img`
-};
-
 
 module.exports.clean = {
   path: [`${DIR.BUILD}${DIR.PATH}`]
