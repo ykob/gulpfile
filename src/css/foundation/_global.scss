@@ -7,5 +7,7 @@ body {
   overflow-y: scroll;
   font-family: $font-jp;
 }
-::selection      {background: rgba(57, 168, 0, 0.2);}
-::-moz-selection {background: rgba(57, 168, 0, 0.2);}
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+}
