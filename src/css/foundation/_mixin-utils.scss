@@ -36,26 +36,60 @@
 }
 
 //
-// cited bootstrap break point
-// http://getbootstrap.com/css/#grid-options
+// rwd break points
+// pc-l | pc-s | tablet | mobile
 //
-@mixin l-lg {
-  @media all and (min-width: $break-point-lg) {
+// ○ | - | - | -
+@mixin l-pc-l {
+  @media all and (min-width: $break-point-pc + 0.01px) {
     @content;
   }
 }
-@mixin l-md {
-  @media all and (min-width: $break-point-md) and (max-width: $break-point-lg) {
+// - | ○ | - | -
+@mixin l-pc-s {
+  @media all and (min-width: $break-point-tablet + 0.01px) and (max-width: $break-point-pc) {
     @content;
   }
 }
-@mixin l-sm {
-  @media all and (min-width: $break-point-sm) and (max-width: $break-point-md) {
+// - | - | ○ | -
+@mixin l-tablet {
+  @media all and (min-width: $break-point-mobile + 0.01px) and (max-width: $break-point-tablet) {
     @content;
   }
 }
-@mixin l-xs {
-  @media all and (max-width: $break-point-sm) {
+// - | - | - | ○
+@mixin l-mobile {
+  @media all and (max-width: $break-point-mobile) {
+    @content;
+  }
+}
+// ○ | ○ | - | -
+@mixin l-pc-all {
+  @media all and (min-width: $break-point-tablet + 0.01px) {
+    @content;
+  }
+}
+// - | ○ | ○ | -
+@mixin l-pc-and-tablet {
+  @media all and (min-width: $break-point-mobile + 0.01px) and (max-width: $break-point-pc) {
+    @content;
+  }
+}
+@mixin l-tablet-and-mobile {
+// - | - | ○ | ○
+  @media all and (max-width: $break-point-tablet) {
+    @content;
+  }
+}
+// ○ | ○ | ○ | -
+@mixin l-more-than-mobile {
+  @media all and (min-width: $break-point-mobile + 0.01px) {
+    @content;
+  }
+}
+// - | ○ | ○ | ○
+@mixin l-less-than-pc {
+  @media all and (max-width: $break-point-pc) {
     @content;
   }
 }

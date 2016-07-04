@@ -8,10 +8,6 @@ $font-jp: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W
 $max-width: 1600px;
 $min-width: 970px;
 
-//
-// cited bootstrap break point
-// http://getbootstrap.com/css/#grid-options
-//
-$break-point-lg: 1200px;
-$break-point-md: 992px;
-$break-point-sm: 768px;
+$break-point-pc: 1440px;
+$break-point-tablet: 1024px;
+$break-point-mobile: 480px;
