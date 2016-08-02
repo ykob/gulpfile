@@ -45,6 +45,7 @@ module.exports.pug = {
     `!${DIR.SRC}/**/_*.pug`
   ],
   dest: `${DIR.DEST}${DIR.PATH}`,
+  json: `${DIR.SRC}/data.json`,
   opts: {
     pretty: true
   }
