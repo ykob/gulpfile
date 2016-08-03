@@ -9,6 +9,7 @@ const DIR = module.exports.DIR =  {
 };
 
 module.exports.serve = {
+  tunnel: 'test',
   notify: false,
   startPath: DIR.PATH,
   ghostMode: false,
