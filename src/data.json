@@ -1,3 +1,17 @@
 {
-  "myVar1": "I AM A STRING!"
+  "meta": {
+    "domain": "http://www.tplh.net",
+    "website_name": "website name",
+    "keywords": "keyword base"
+  },
+  "pages": {
+    "index": {
+      "title": "page title",
+      "keywords": "keyword1, keyword2",
+      "description": "page description",
+      "path": "/",
+      "ogp_description": "page ogp description",
+      "ogp_img": "ogp.jpg"
+    }
+  }
 }
