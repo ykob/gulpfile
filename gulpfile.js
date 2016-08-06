@@ -10,6 +10,7 @@ requireDir('./gulp/tasks');
 
 gulp.task('predefault', cb => {
   runSequence(
+    'clean-dst',
     ['pug', 'sass', 'watchify', 'copy-vendor-script'],
     'serve',
     cb
