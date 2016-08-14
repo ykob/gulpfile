@@ -38,6 +38,7 @@
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^4.2.2",
     "licensify": "^2.2.0",
+    "merge-stream": "^1.0.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
     "vinyl-source-stream": "^1.1.0",

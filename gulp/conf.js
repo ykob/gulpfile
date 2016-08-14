@@ -75,6 +75,16 @@ module.exports.replace_html = {
   path: `${DIR.PATH}`
 };
 
+module.exports.sprite = {
+  src: [
+    `${DIR.SRC}/img/sprite/**/*.png`
+  ],
+  dest: {
+    img: `${DIR.DEST}${DIR.PATH}/img/sprite`,
+    css: `${DIR.SRC}/css/foundation`
+  }
+};
+
 module.exports.minify_css = {
   src: `${DIR.DEST}${DIR.PATH}/css/main.css`,
   dest: `${DIR.BUILD}${DIR.PATH}/css`
