@@ -80,8 +80,17 @@ module.exports.sprite = {
     `${DIR.SRC}/img/sprite/**/*.png`
   ],
   dest: {
-    img: `${DIR.DEST}${DIR.PATH}/img/sprite`,
+    img: `${DIR.DEST}${DIR.PATH}/img/common`,
     css: `${DIR.SRC}/css/foundation`
+  },
+  opts: {
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss',
+    imgPath: '../img/common/sprite.png',
+    padding: 10,
+    cssOpts: {
+      functions: false
+    }
   }
 };
 

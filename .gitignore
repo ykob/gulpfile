@@ -6,6 +6,6 @@ dst/css/**/*
 dst/js/**/*
 dst/**/*.json
 dst/**/*.html
-dst/img/sprite/**/*
+dst/img/common/sprite.png
 build/**/*
 .sass-cache
