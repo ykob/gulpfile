@@ -12,28 +12,6 @@
     clear: both;
   }
 }
-@mixin icon($src, $width, $height, $display) {
-  width: $width;
-  height: $height;
-  content: '';
-  display: $display;
-  background-image: url($src);
-  background-size: $width, $height;
-  background-repeat: no-repeat;
-}
-@mixin flexWidth {
-  width: 100%;
-  min-width: $min-width;
-  max-width: $max-width;
-  margin-right: auto;
-  margin-left: auto;
-}
-@mixin fullWidth {
-  width: 100%;
-  min-width: $min-width;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 //
 // rwd break points
