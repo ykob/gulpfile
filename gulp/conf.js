@@ -9,7 +9,7 @@ const DIR = module.exports.DIR =  {
 };
 
 module.exports.serve = {
-  tunnel: 'test',
+  //tunnel: 'test',
   notify: false,
   startPath: DIR.PATH,
   ghostMode: false,
@@ -18,6 +18,20 @@ module.exports.serve = {
     index: 'index.html',
     routes: {
       [DIR.PATH]: `${DIR.DEST}${DIR.PATH}/`
+    }
+  }
+};
+
+module.exports.serve_build = {
+  //tunnel: 'test',
+  notify: false,
+  startPath: DIR.PATH,
+  ghostMode: false,
+  server: {
+    baseDir: DIR.BUILD,
+    index: 'index.html',
+    routes: {
+      [DIR.PATH]: `${DIR.BUILD}${DIR.PATH}/`
     }
   }
 };
