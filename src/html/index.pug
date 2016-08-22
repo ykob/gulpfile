@@ -1,12 +1,9 @@
--
-  var page = pages.index;
+extends ./layout/_page.pug
 
-doctype html
-html(lang="ja")
-  head
-    include ./modules/_head.pug
-  body
-    .l-page
-      include ./modules/_l-gh.pug
-      include ./modules/_l-gf.pug
-    include ./modules/_script.pug
+block vars
+  -
+    var page = pages.index;
+
+block content
+  .c-contetns
+    p aaa
