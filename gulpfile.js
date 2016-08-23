@@ -37,7 +37,7 @@ gulp.task('default', ['predefault'], () => {
 
 gulp.task('build', cb => {
   runSequence(
-    'clean',
+    'clean-build',
     'sprite',
     ['pug', 'sass'],
     'replace-html',

@@ -9,29 +9,30 @@ const DIR = module.exports.DIR =  {
 };
 
 module.exports.serve = {
-  //tunnel: 'test',
-  notify: false,
-  startPath: DIR.PATH,
-  ghostMode: false,
-  server: {
-    baseDir: DIR.DEST,
-    index: 'index.html',
-    routes: {
-      [DIR.PATH]: `${DIR.DEST}${DIR.PATH}/`
+  dst: {
+    //tunnel: 'test',
+    notify: false,
+    startPath: DIR.PATH,
+    ghostMode: false,
+    server: {
+      baseDir: DIR.DEST,
+      index: 'index.html',
+      routes: {
+        [DIR.PATH]: `${DIR.DEST}${DIR.PATH}/`
+      }
     }
-  }
-};
-
-module.exports.serve_build = {
-  //tunnel: 'test',
-  notify: false,
-  startPath: DIR.PATH,
-  ghostMode: false,
-  server: {
-    baseDir: DIR.BUILD,
-    index: 'index.html',
-    routes: {
-      [DIR.PATH]: `${DIR.BUILD}${DIR.PATH}/`
+  },
+  build: {
+    //tunnel: 'test',
+    notify: false,
+    startPath: DIR.PATH,
+    ghostMode: false,
+    server: {
+      baseDir: DIR.BUILD,
+      index: 'index.html',
+      routes: {
+        [DIR.PATH]: `${DIR.BUILD}${DIR.PATH}/`
+      }
     }
   }
 };
@@ -123,18 +124,19 @@ module.exports.uglify = {
   }
 };
 
-module.exports.copy_vendor_script = {
-  src: [
-    `${DIR.SRC}/js/vendor/*.js`,
-  ],
-  dest: `${DIR.DEST}${DIR.PATH}/js/vendor/`
-};
-
-module.exports.copy_vendor_script_to_build = {
-  src: [
-    `${DIR.DEST}${DIR.PATH}/js/vendor/*.js`,
-  ],
-  dest: `${DIR.BUILD}${DIR.PATH}/js/vendor/`
+module.exports.copy = {
+  vendor_script: {
+    src: [
+      `${DIR.SRC}/js/vendor/*.js`,
+    ],
+    dest: `${DIR.DEST}${DIR.PATH}/js/vendor/`
+  },
+  vendor_script_to_build: {
+    src: [
+      `${DIR.DEST}${DIR.PATH}/js/vendor/*.js`,
+    ],
+    dest: `${DIR.BUILD}${DIR.PATH}/js/vendor/`
+  }
 };
 
 module.exports.imagemin = {
@@ -145,13 +147,14 @@ module.exports.imagemin = {
 };
 
 module.exports.clean = {
-  path: [`${DIR.BUILD}${DIR.PATH}`]
-};
-
-module.exports.clean_dst = {
-  path: [
-    `${DIR.DEST}${DIR.PATH}/**/*.html`,
-    `${DIR.DEST}${DIR.PATH}/css/`,
-    `${DIR.DEST}${DIR.PATH}/js/`
-  ]
+  dst: {
+    path: [
+      `${DIR.DEST}${DIR.PATH}/**/*.html`,
+      `${DIR.DEST}${DIR.PATH}/css/`,
+      `${DIR.DEST}${DIR.PATH}/js/`
+    ]
+  },
+  build: {
+    path: [`${DIR.BUILD}${DIR.PATH}`]
+  }
 };
