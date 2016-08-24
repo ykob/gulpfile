@@ -82,12 +82,14 @@ module.exports.sass = {
   ]
 };
 
-module.exports.replace_html = {
-  src: [
-    `${DIR.DEST}${DIR.PATH}/**/*.html`
-  ],
-  dest: `${DIR.BUILD}${DIR.PATH}`,
-  path: `${DIR.PATH}`
+module.exports.replace = {
+  html: {
+    src: [
+      `${DIR.DEST}${DIR.PATH}/**/*.html`
+    ],
+    dest: `${DIR.BUILD}${DIR.PATH}`,
+    path: `${DIR.PATH}`
+  }
 };
 
 module.exports.sprite = {
