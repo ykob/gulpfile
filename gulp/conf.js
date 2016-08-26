@@ -151,7 +151,7 @@ module.exports.copy = {
 
 module.exports.imagemin = {
   src: [
-    `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif}`
+    `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`
   ],
   dest: `${DIR.BUILD}${DIR.PATH}/img`
 };
