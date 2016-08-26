@@ -12,7 +12,7 @@ gulp.task('predefault', cb => {
   runSequence(
     'clean-dst',
     'sprite',
-    ['pug', 'sass', 'watchify', 'copy-vendor-script'],
+    ['pug', 'sass', 'watchify', 'copy-to-dest'],
     'serve',
     cb
   );
@@ -43,7 +43,7 @@ gulp.task('build', cb => {
     'replace-html',
     ['minify-css', 'browserify', 'imagemin'],
     'uglify',
-    'copy-vendor-script-to-build',
+    'copy-to-build',
     cb
   );
 });

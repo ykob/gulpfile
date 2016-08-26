@@ -127,17 +127,25 @@ module.exports.uglify = {
 };
 
 module.exports.copy = {
-  vendor_script: {
+  dest: {
     src: [
       `${DIR.SRC}/js/vendor/*.js`,
     ],
-    dest: `${DIR.DEST}${DIR.PATH}/js/vendor/`
+    dest: `${DIR.DEST}${DIR.PATH}`,
+    opts: {
+      base: `${DIR.SRC}`
+    }
   },
-  vendor_script_to_build: {
+  build: {
     src: [
       `${DIR.DEST}${DIR.PATH}/js/vendor/*.js`,
+      `${DIR.DEST}${DIR.PATH}/img/**/*.ico`,
+      `${DIR.DEST}${DIR.PATH}/font/**/*.*`,
     ],
-    dest: `${DIR.BUILD}${DIR.PATH}/js/vendor/`
+    dest: `${DIR.BUILD}${DIR.PATH}`,
+    opts: {
+      base: `${DIR.DEST}${DIR.PATH}`
+    }
   }
 };
 
