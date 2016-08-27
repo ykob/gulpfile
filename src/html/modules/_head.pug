@@ -1,6 +1,7 @@
 - 
   var title_merge = "";
   var keywords_merge = "";
+  var theme_color = '#ffffff';
 
   if (page.title != "")
     title_merge = page.title + " │ " + meta.website_name;
@@ -18,9 +19,9 @@ title #{title_merge}
 meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1")
 meta(name="description", content = page.description)
 meta(name="keywords", content = keywords_merge)
-meta(name="theme-color", content="#ffffff")
+meta(name="theme-color", content=theme_color)
 meta(name="msapplication-TileImage", content="/img/common/ms_tileimage.png")
-meta(name="msapplication-TileColor", content="#ffffff")
+meta(name="msapplication-TileColor", content=theme_color)
 link(rel="shortcut icon" href="/img/common/icon.ico")
 link(rel="apple-touch-icon" sizes="180x180" href="/img/common/app-icon.png")
 link(rel="stylesheet" href="/css/main.css")
