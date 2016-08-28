@@ -130,6 +130,7 @@ module.exports.copy = {
   dest: {
     src: [
       `${DIR.SRC}/js/vendor/*.js`,
+      `${DIR.SRC}/font/**/*.*`,
     ],
     dest: `${DIR.DEST}${DIR.PATH}`,
     opts: {
