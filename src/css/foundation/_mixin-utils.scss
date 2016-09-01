@@ -2,6 +2,17 @@
   font-size: $size + px;
   font-size: $size / 16 * 1rem;
 }
+@mixin flexFontSize($vw) {
+  @include l-pc-l {
+    font-size: $break-point-pc / 100 * $vw;
+  }
+  @include l-pc-and-tablet {
+    font-size: $vw * 1vw;
+  }
+  @include l-mobile {
+    font-size: $break-point-mobile / 100 * $vw;
+  }
+}
 @mixin clearfix {
   &:before,
   &:after {
