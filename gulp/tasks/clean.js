@@ -3,13 +3,13 @@ const del = require('del');
 
 const conf = require('../conf').clean;
 
-gulp.task('clean-dst', cb => {
-  del(conf.dst.path).then(() => {
+gulp.task('cleanDest', cb => {
+  del(conf.dest.path).then(() => {
     cb();
   });
 });
 
-gulp.task('clean-build', cb => {
+gulp.task('cleanBuild', cb => {
   del(conf.build.path).then(() => {
     cb();
   });

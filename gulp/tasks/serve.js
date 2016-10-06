@@ -4,9 +4,9 @@ const browserSync = require('browser-sync');
 const conf = require('../conf').serve;
 
 gulp.task('serve', () => {
-  browserSync(conf.dst);
+  browserSync(conf.dest);
 });
 
-gulp.task('serve-build', () => {
+gulp.task('serveBuild', () => {
   browserSync(conf.build);
 });

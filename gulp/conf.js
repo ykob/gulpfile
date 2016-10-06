@@ -9,7 +9,7 @@ const DIR = module.exports.DIR =  {
 };
 
 module.exports.serve = {
-  dst: {
+  dest: {
     //tunnel: 'test',
     notify: false,
     startPath: DIR.PATH,
@@ -54,7 +54,7 @@ module.exports.scripts = {
   dest: `${DIR.DEST}${DIR.PATH}/js`
 };
 
-module.exports.vendor_scripts = {
+module.exports.vendorScripts = {
   src: [
     `./${DIR.SRC}/js/vendor/jquery.js`,
     `./${DIR.SRC}/js/vendor/jquery.easing.js`,
@@ -120,7 +120,7 @@ module.exports.sprite = {
   }
 };
 
-module.exports.minify_css = {
+module.exports.minifyCss = {
   src: `${DIR.DEST}${DIR.PATH}/css/main.css`,
   dest: `${DIR.BUILD}${DIR.PATH}/css`
 };
@@ -166,7 +166,7 @@ module.exports.imagemin = {
 };
 
 module.exports.clean = {
-  dst: {
+  dest: {
     path: [
       `${DIR.DEST}${DIR.PATH}/**/*.html`,
       `${DIR.DEST}${DIR.PATH}/css/`,
