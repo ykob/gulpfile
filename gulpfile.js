@@ -33,6 +33,14 @@ gulp.task('default', ['predefault'], () => {
     [`./${DIR.DEST}/**/*.js`],
     reload
   );
+
+  gulp.watch(
+    [
+      `./${DIR.SRC}/img/**/*.*`,
+      `./${DIR.SRC}/font/**/*.*`,
+    ],
+    ['copyToDest', reload]
+  );
 });
 
 gulp.task('build', cb => {
