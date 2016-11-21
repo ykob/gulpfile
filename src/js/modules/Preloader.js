@@ -7,7 +7,6 @@ export default class Preloader {
     this.complete = false;
   }
   start(data, callbackLoadedData, callbackLoadedDataAll) {
-    if (!data.isArray) return;
     this.data = data;
     this.callbackLoadedData = callbackLoadedData;
     this.callbackLoadedDataAll = callbackLoadedDataAll;
