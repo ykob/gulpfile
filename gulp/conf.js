@@ -120,7 +120,7 @@ module.exports.sprite = {
   }
 };
 
-module.exports.minifyCss = {
+module.exports.cleanCss = {
   src: `${DIR.DEST}${DIR.PATH}/css/main.css`,
   dest: `${DIR.BUILD}${DIR.PATH}/css`
 };

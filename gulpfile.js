@@ -49,7 +49,7 @@ gulp.task('build', cb => {
     'sprite',
     ['pug', 'sass'],
     'replaceHtml',
-    ['minifyCss', 'browserify', 'vendorScripts', 'imagemin'],
+    ['cleanCss', 'browserify', 'vendorScripts', 'imagemin'],
     'uglify',
     'copyToBuild',
     cb
