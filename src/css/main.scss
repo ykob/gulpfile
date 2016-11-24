@@ -15,7 +15,8 @@
 // Base
 @import "foundation/_normalize";
 @import "foundation/_global";
-@import "foundation/_sprite";
+@import "foundation/_keyframes";
+//@import "foundation/_sprite";
 
 // ==========================================================================
 // Layout
@@ -40,7 +41,7 @@
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
-// @import "object/utility/_xxx";
+@import "object/utility/_m";
 
 // -----------------------------------------------------------------
 // Vendor
