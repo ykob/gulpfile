@@ -4,6 +4,7 @@ export default class Preloader {
     this.callbackLoadedData = null;
     this.callbackLoadedDataAll = null;
     this.countLoaded = 0;
+    this.progress = 0;
     this.complete = false;
   }
   start(data, callbackLoadedData, callbackLoadedDataAll) {
@@ -38,6 +39,7 @@ export default class Preloader {
   }
   loadedData() {
     this.countLoaded++;
+    this.progress = this.countLoaded / this.data.length;
     if (this.callbackLoadedData) this.callbackLoadedData();
     if (this.countLoaded >= this.data.length) {
       this.loadedDataAll();
@@ -45,6 +47,7 @@ export default class Preloader {
   }
   loadedDataAll() {
     this.complete = true;
+    this.countLoaded = 0;
     if (this.callbackLoadedDataAll) this.callbackLoadedDataAll();
   }
 }
