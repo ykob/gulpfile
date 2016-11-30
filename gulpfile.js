@@ -50,7 +50,10 @@ gulp.task('build', cb => {
     ['pug', 'sass', 'browserify', 'vendorScripts', 'copyToDest'],
     'cleanBuild',
     'replaceHtml',
-    ['cleanCss', 'imagemin', 'uglify', 'copyToBuild'],
+    'cleanCss',
+    'imagemin',
+    'uglify',
+    'copyToBuild',
     cb
   );
 });
