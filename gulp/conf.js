@@ -58,6 +58,7 @@ module.exports.vendorScripts = {
   src: [
     `./${DIR.SRC}/js/vendor/jquery.js`,
     `./${DIR.SRC}/js/vendor/jquery.easing.js`,
+    `./${DIR.SRC}/js/vendor/vue.js`,
   ],
   concat: 'vendor.js',
   dest: `./${DIR.DEST}${DIR.PATH}/js/`
