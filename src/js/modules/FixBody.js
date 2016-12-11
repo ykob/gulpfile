@@ -1,7 +1,7 @@
 export default class FixBody {
   constructor() {
-    this.$window = jQuery(window);
-    this.$body = jQuery('body');
+    this.$window = $(window);
+    this.$body = $('body');
     this.top = 0;
   }
   set() {
