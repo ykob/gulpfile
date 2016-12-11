@@ -4,8 +4,8 @@ ignore
 src/css/foundation/_sprite.scss
 dst/css/**/*
 dst/js/**/*
+dst/img/**/*
 dst/**/*.json
 dst/**/*.html
-dst/img/common/sprite.png
 build/**/*
 .sass-cache
