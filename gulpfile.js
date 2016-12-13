@@ -53,7 +53,7 @@ gulp.task('build', cb => {
     'cleanCss',
     'imagemin',
     'uglify',
-    'copyToBuild',
+    ['copyToBuild', 'copyPhpToBuild'],
     cb
   );
 });

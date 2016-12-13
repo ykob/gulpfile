@@ -157,6 +157,16 @@ module.exports.copy = {
     opts: {
       base: `${DIR.DEST}${DIR.PATH}`
     }
+  },
+  php: {
+    src: [
+      `${DIR.SRC}/html/**/*.php`,
+      `${DIR.SRC}/html/cms/**/*.*`,
+    ],
+    dest: `${DIR.BUILD}${DIR.PATH}`,
+    opts: {
+      base: `${DIR.SRC}/html/`
+    }
   }
 };
 
