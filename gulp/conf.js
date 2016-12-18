@@ -141,6 +141,7 @@ module.exports.copy = {
   dest: {
     src: [
       `${DIR.SRC}/img/**/*.*`,
+      `!${DIR.SRC}/img/sprite/*.*`,
       `${DIR.SRC}/font/**/*.*`,
     ],
     dest: `${DIR.DEST}${DIR.PATH}`,
