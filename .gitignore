@@ -2,10 +2,6 @@
 node_modules
 ignore
 src/css/foundation/_sprite.scss
-dst/css/**/*
-dst/js/**/*
-dst/img/**/*
-dst/**/*.json
-dst/**/*.html
+dst/**/*
 build/**/*
 .sass-cache
