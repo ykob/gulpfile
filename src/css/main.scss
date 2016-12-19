@@ -10,7 +10,7 @@
 // Mixins
 @import "foundation/_mixin-utils";
 @import "foundation/_mixin-easing";
-@import "foundation/_mixin-sprite";
+//@import "foundation/_mixin-sprite";
 
 // Base
 @import "foundation/_normalize";
@@ -21,8 +21,9 @@
 // ==========================================================================
 // Layout
 // ==========================================================================
-@import "layout/_gh";
+@import "layout/_contents";
 @import "layout/_gf";
+@import "layout/_gh";
 @import "layout/_page";
 
 // ==========================================================================

@@ -1,7 +1,7 @@
 {
   "meta": {
     "domain": "http://www.tplh.net",
-    "website_name": "website name",
+    "websiteName": "website name",
     "keywords": "keyword base"
   },
   "pages": {
@@ -10,8 +10,8 @@
       "keywords": "keyword1, keyword2",
       "description": "page description",
       "path": "/",
-      "ogp_description": "page ogp description",
-      "ogp_img": "ogp.jpg"
+      "ogpDescription": "page ogp description",
+      "ogpImg": "ogp.jpg"
     }
   }
 }
