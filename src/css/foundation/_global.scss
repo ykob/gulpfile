@@ -10,7 +10,8 @@ body {
   color: #fff;
   background: rgba(0, 0, 0, 0.8);
 }
-input::selection {
+input::selection,
+textarea::selection {
   color: $color-text-black;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.2);
 }
