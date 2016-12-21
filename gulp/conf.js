@@ -190,3 +190,24 @@ module.exports.clean = {
     path: [`${DIR.BUILD}${DIR.PATH}`]
   }
 };
+
+module.exports.sitemap = {
+  src: [
+    `${DIR.BUILD}${DIR.PATH}/**/*.html`,
+    `!${DIR.BUILD}${DIR.PATH}/404/*.html`,
+  ],
+  opts: {
+    siteUrl: DOMAIN,
+    mappings: [
+      {
+        pages: [`index.html`],
+        priority: 1.0,
+      },
+      {
+        pages: [`**/*.html`],
+        priority: 0.1,
+      }
+    ]
+  },
+  dest: `${DIR.BUILD}${DIR.PATH}/`
+};

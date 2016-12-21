@@ -54,6 +54,7 @@ gulp.task('build', cb => {
     'imagemin',
     'uglify',
     ['copyToBuild', 'copyPhpToBuild'],
+    'sitemap'
     cb
   );
 });
