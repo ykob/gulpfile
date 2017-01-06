@@ -6,6 +6,12 @@ body {
   overflow-y: scroll;
   font-family: $font-jp;
 }
+input, button, select {
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
 ::selection {
   color: #fff;
   background: rgba(0, 0, 0, 0.8);
