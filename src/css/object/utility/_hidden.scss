@@ -1,0 +1,22 @@
+.u-hidden {
+  &-pc-l {
+    @include l-pc-l {
+      display: none;
+    }
+  }
+  &-pc-s {
+    @include l-pc-s {
+      display: none;
+    }
+  }
+  &-tablet {
+    @include l-tablet {
+      display: none;
+    }
+  }
+  &-mobile {
+    @include l-mobile {
+      display: none;
+    }
+  }
+}
