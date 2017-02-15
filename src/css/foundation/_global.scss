@@ -5,6 +5,8 @@ body {
   min-height: 100%;
   overflow-y: scroll;
   font-family: $font-jp;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 input, button, select {
   appearance: none;
