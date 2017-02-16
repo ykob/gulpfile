@@ -4,7 +4,7 @@ mixin picture(srcArray, alt)
   )
     if (srcArray[2])
       source(
-        media = '(max-width: 1024px)',
+        media = '(min-width: 569px) and (max-width: 1024px)',
         srcset = srcArray[2]
         )
     if (srcArray[1])
