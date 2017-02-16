@@ -1,3 +1,22 @@
+mixin picture(srcArray, alt)
+  picture(
+    class = attributes.className
+  )
+    if (srcArray[2])
+      source(
+        media = '(max-width: 1024px)',
+        srcset = srcArray[2]
+        )
+    if (srcArray[1])
+      source(
+        media = '(max-width: 568px)',
+        srcset = srcArray[1]
+        )
+    img(
+      src = srcArray[0],
+      alt = ""
+    )
+
 mixin splitStr(str, className)
   -
     var strArr = str.split('');
