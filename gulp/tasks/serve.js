@@ -21,7 +21,7 @@ const pugMiddleWare = (req, res, next) => {
     return next();
   }
   const pugPath = requestPath.replace('.html', '.pug');
-  console.log("[BS] Rendering pug files from : "+ pugPath);
+  console.log("[BS] Rendering pug file : "+ pugPath);
   const content = pug.renderFile(pugPath, {
     data: JSON.parse(fs.readFileSync(confPug.json)),
     pretty: true,
