@@ -11,7 +11,7 @@ my gulp set.
 | Tablet Portrait | 768px (iPad) |
 | Mobile | 568px (iPhone5 / iPhone5s) |
 
-| mixin name | PC L | PC S | Tablet Landscape | Tablet Portrait | Mobile |
+| mixin name | PC L | PC S | Tablet L | Tablet P | Mobile |
 | --- | :---: | :---: | :---: | :---: | :---: |
 | l-pc-l | **○** | - | - | - | - |
 | l-pc-s | - | **○** | - | - | - |
