@@ -1,4 +1,9 @@
 .u-dn {
+  &-pc {
+    @include l-pc-all {
+      display: none;
+    }
+  }
   &-pc-l {
     @include l-pc-l {
       display: none;
@@ -10,7 +15,17 @@
     }
   }
   &-tablet {
-    @include l-tablet {
+    @include l-tablet-all {
+      display: none;
+    }
+  }
+  &-tablet-l {
+    @include l-tablet-l {
+      display: none;
+    }
+  }
+  &-tablet-p {
+    @include l-tablet-p {
       display: none;
     }
   }
