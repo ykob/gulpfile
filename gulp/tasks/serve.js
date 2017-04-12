@@ -6,6 +6,7 @@ const fs = require('fs');
 const url = require("url");
 const pug = require('pug');
 
+const DIR = require('../conf').DIR;
 const conf = require('../conf').serve;
 const confPug = require('../conf').pug;
 
@@ -20,7 +21,11 @@ const pugMiddleWare = (req, res, next) => {
   if (path.parse(requestPath).ext !== '.html') {
     return next();
   }
-  const pugPath = requestPath.replace('.html', '.pug');
+  let pugPath = requestPath.replace('.html', '.pug');
+  if (DIR.PATH.length > 0) {
+    const startPath = DIR.PATH.replace(/\//g, '\\');
+    pugPath = pugPath.replace(startPath, '\\');
+  }
   console.log("[BS] Rendering pug file : "+ pugPath);
   const content = pug.renderFile(pugPath, {
     data: JSON.parse(fs.readFileSync(confPug.json)),
