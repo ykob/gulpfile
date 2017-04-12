@@ -181,10 +181,10 @@ module.exports.imagemin = {
 
 module.exports.clean = {
   dest: {
-    path: [`${DIR.DEST}${DIR.PATH}`]
+    path: [`${DIR.DEST}`]
   },
   build: {
-    path: [`${DIR.BUILD}${DIR.PATH}`]
+    path: [`${DIR.BUILD}`]
   }
 };
 
