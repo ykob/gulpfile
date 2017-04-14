@@ -26,7 +26,6 @@ const pugMiddleWare = (req, res, next) => {
     const startPath = DIR.PATH.replace(/\//g, '\\');
     pugPath = pugPath.replace(startPath, '\\');
   }
-  console.log("[BS] Rendering pug file : "+ pugPath);
   const content = pug.renderFile(pugPath, {
     data: JSON.parse(fs.readFileSync(confPug.json)),
     pretty: true,
