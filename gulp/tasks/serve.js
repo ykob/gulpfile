@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const yargs = require('yargs').argv;
 const browserSync = require('browser-sync');
 const path = require("path");
+const slash = require('slash');
 const fs = require('fs');
 const url = require("url");
 const pug = require('pug');
@@ -21,10 +22,9 @@ const pugMiddleWare = (req, res, next) => {
   if (path.parse(requestPath).ext !== '.html') {
     return next();
   }
-  let pugPath = requestPath.replace('.html', '.pug');
-  if (DIR.PATH.length > 0) {
-    const startPath = DIR.PATH.replace(/\//g, '\\');
-    pugPath = pugPath.replace(startPath, '\\');
+  let pugPath = slash(requestPath.replace('.html', '.pug'));
+  if (DIR.PATH2.length > 0) {
+    pugPath = pugPath.replace(DIR.PATH2, '/');
   }
   const content = pug.renderFile(pugPath, {
     data: JSON.parse(fs.readFileSync(confPug.json)),
