@@ -23,8 +23,8 @@ const pugMiddleWare = (req, res, next) => {
     return next();
   }
   let pugPath = slash(requestPath.replace('.html', '.pug'));
-  if (DIR.PATH2.length > 0) {
-    pugPath = pugPath.replace(DIR.PATH2, '/');
+  if (DIR.PATH.length > 0) {
+    pugPath = pugPath.replace(DIR.PATH, '/');
   }
   const content = pug.renderFile(pugPath, {
     data: JSON.parse(fs.readFileSync(confPug.json)),
