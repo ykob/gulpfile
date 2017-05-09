@@ -10,8 +10,10 @@ html(lang="ja")
   body
     .l-page
       include ./_gh.pug
+      block contentFixedBefore
       .l-contents
-        block content
+        block contentStatic
+      block contentFixedAfter
       include ./_gf.pug
     block script
     script(src="/js/vendor.js")
