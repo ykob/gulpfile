@@ -8,13 +8,12 @@ html(lang="ja")
   head
     include ./_head.pug
   body
-    .l-page
-      include ./_gh.pug
-      block contentFixedBefore
-      .l-contents
-        block contentStatic
-      block contentFixedAfter
-      include ./_gf.pug
+    include ./_gh.pug
+    block contentFixedBefore
+    .l-contents
+      block contentStatic
+    block contentFixedAfter
+    include ./_gf.pug
     block script
     script(src="/js/vendor.js")
     script(src="/js/main.js")
