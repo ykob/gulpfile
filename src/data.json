@@ -2,7 +2,8 @@
   "meta": {
     "domain": "http://www.tplh.net",
     "websiteName": "website name",
-    "keywords": "keyword base"
+    "keywords": "keyword base",
+    "themeColor": "#ffffff"
   },
   "pages": {
     "index": {
