@@ -1,12 +1,12 @@
 import initCommon from './init/common.js'
 import initIndex from './init/index.js'
 
-const { pathname } = window.location;
+const pageId = document.getElementsByClassName('l-page')[0].getAttribute('data-page-id');
 
 const init = () => {
   initCommon();
-  switch (pathname.replace('index.html', '')) {
-    case '/':
+  switch (pageId) {
+    case 'index':
       initIndex();
       break;
     default:

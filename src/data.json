@@ -6,6 +6,7 @@
   },
   "pages": {
     "index": {
+      "id": "index",
       "title": "page title",
       "keywords": "keyword1, keyword2",
       "description": "page description",
