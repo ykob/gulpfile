@@ -7,9 +7,9 @@ my gulp set.
 | device | display resolution |
 | --- | --- |
 | PC | 1366px (HD FWXGA) |
-| Tablet Landscape | 1024px (iPad) |
-| Tablet Portrait | 768px (iPad) |
-| Mobile | 568px (iPhone5 / iPhone5s) |
+| Tablet Landscape | 1024px (XGA / iPad Landscape) |
+| Tablet Portrait | 768px (iPad Portrait) |
+| Mobile | 414px (iPhone7 Plus Portrait) |
 
 | mixin name | PC L | PC S | Tablet L | Tablet P | Mobile |
 | --- | :---: | :---: | :---: | :---: | :---: |

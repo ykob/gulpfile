@@ -13,7 +13,7 @@ $color-text-black: #222;
 //     url('/font/xxx.woff') format('woff');
 // }
 
-$font-jp: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$font-ja: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 
 $max-width: 1600px;
 $min-width: 970px;
@@ -21,4 +21,4 @@ $min-width: 970px;
 $break-point-pc-s: 1366px;
 $break-point-tablet-l: 1024px;
 $break-point-tablet-p: 768px;
-$break-point-mobile: 568px;
+$break-point-mobile: 414px;
