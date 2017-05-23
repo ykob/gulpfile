@@ -9,6 +9,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'palt';
 }
+img {
+  vertical-align: top;
+}
 input, button, select {
   appearance: none;
 }
