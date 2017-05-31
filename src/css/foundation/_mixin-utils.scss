@@ -2,6 +2,15 @@
   font-size: $size + px;
   font-size: $size / 16 * 1rem;
 }
+@mixin fontSizeMobile($size: 14) {
+  @include fontSize($size);
+  @media all and (max-width: 414px) {
+    font-size: $size / 320 * 100vw;
+  }
+  @media all and (min-width: 415px) {
+    font-size: $size / 320 * 414px;
+  }
+}
 @mixin flexFontSize($vw) {
   @include l-pc-l {
     font-size: $break-point-pc-s / 100 * $vw;
