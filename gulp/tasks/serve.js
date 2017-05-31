@@ -26,6 +26,7 @@ const pugMiddleWare = (req, res, next) => {
   if (DIR.PATH.length > 0) {
     pugPath = pugPath.replace(DIR.PATH, '/');
   }
+  console.log("[BS] try to file "+ pugPath);
   const content = pug.renderFile(pugPath, {
     data: JSON.parse(fs.readFileSync(confPug.json)),
     pretty: true,
