@@ -156,7 +156,9 @@ module.exports.copy = {
       `${DIR.DEST}${DIR.PATH}/font/**/*.*`,
     ],
     dest: `${DIR.BUILD}`,
-    opts: {}
+    opts: {
+      base: `${DIR.DEST}${DIR.PATH}`
+    }
   },
   php: {
     src: [
