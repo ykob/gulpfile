@@ -10,6 +10,13 @@ my gulp set.
 | dst | `gulp` を実行すると書き出される。開発時にローカルサーバーから参照するファイル。 |
 | src | 開発に使用するファイル。 |
 
+## Command
+
+| command name | purpose |
+| --- | --- |
+| `gulp` | 開発時に実行するコマンド。<br>[Brosersync](https://github.com/browsersync/browser-sync)によってローカルサーバーが起動し、開発用ファイルの更新を監視する。 |
+| `gulp build` | 納品・公開用のファイルを生成するコマンド。 |
+
 ## Breakpoints
 
 | device | display resolution |
