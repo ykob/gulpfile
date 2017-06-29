@@ -2,6 +2,14 @@
 
 my gulp set.
 
+## Folders
+
+| folder name | purpose |
+| --- | --- |
+| build | `gulp build` を実行すると書き出される。主に納品・公開用のファイルとして扱う。 |
+| dst | `gulp` を実行すると書き出される。開発時にローカルサーバーから参照するファイル。 |
+| src | 開発に使用するファイル。 |
+
 ## Breakpoints
 
 | device | display resolution |
