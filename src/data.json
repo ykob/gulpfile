@@ -1,16 +1,16 @@
 {
   "meta": {
-    "domain": "http://www.tplh.net",
-    "websiteName": "website name",
-    "keywords": "keyword base",
+    "domain": "http://www.xxx.com",
+    "websiteName": "",
+    "keywords": "",
     "themeColor": "#ffffff"
   },
   "pages": {
     "index": {
       "id": "index",
-      "title": "page title",
-      "keywords": "keyword1, keyword2",
-      "description": "page description",
+      "title": "",
+      "keywords": "",
+      "description": "",
       "path": "/",
       "ogpImg": "ogp.jpg"
     }
