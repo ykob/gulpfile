@@ -72,10 +72,11 @@ module.exports.pug = {
     `!${DIR.SRC}/**/_*.pug`
   ],
   dest: `${DIR.DEST}${DIR.PATH}`,
-  json: `${DIR.SRC}/data.json`,
   opts: {
     pretty: true
-  }
+  },
+  json: `${DIR.SRC}/data.json`,
+  path: `${DIR.PATH}`,
 };
 
 module.exports.sass = {
