@@ -12,7 +12,7 @@ body {
 img {
   vertical-align: top;
 }
-input, button, select {
+input[type=text], button, select {
   appearance: none;
   border-radius: 0;
 }
