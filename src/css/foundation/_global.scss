@@ -28,3 +28,12 @@ textarea::selection {
   color: $color-text-black;
   background: rgba(0, 0, 0, 0.2);
 }
+::-webkit-input-placeholder {
+  color: #666;
+}
+::-moz-placeholder {
+  color: #666;
+}
+:-ms-input-placeholder {
+  color: #666;
+}
