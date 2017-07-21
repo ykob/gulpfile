@@ -5,6 +5,7 @@ const conf = require('../conf').pug;
 
 gulp.task('pug', () => {
   const data = require(`../../${conf.json}`);
+  data.meta.domain = conf.domain;
   data.meta.path = conf.path;
   return gulp.src(conf.src)
     .pipe($.plumber({
