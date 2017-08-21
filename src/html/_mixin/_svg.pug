@@ -5,7 +5,7 @@ mixin svg(width, widthBase, heightBase, classNameBase, className, id)
     height = Math.ceil(width * heightBase / widthBase),
     viewBox = `0 0 ${widthBase} ${heightBase}`,
     class = (className) ? `${classNameBase} ${className}` : classNameBase,
-    id = (id) ? attributes.id : ''
+    id = (id) ? id : ''
   )
     block
 
