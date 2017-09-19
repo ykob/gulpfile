@@ -58,3 +58,11 @@ gulp.task('build', cb => {
     cb
   );
 });
+
+gulp.task('buildScript', cb => {
+  runSequence(
+    'browserify',
+    'uglify',
+    cb
+  );
+});
