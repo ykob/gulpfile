@@ -152,6 +152,7 @@ module.exports.copy = {
   build: {
     src: [
       `${DIR.DEST}${DIR.PATH}/img/**/*.ico`,
+      `${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
       `${DIR.DEST}${DIR.PATH}/font/**/*.*`,
     ],
     dest: `${DIR.BUILD}`,
@@ -173,7 +174,8 @@ module.exports.copy = {
 
 module.exports.imagemin = {
   src: [
-    `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`
+    `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`,
+    `!${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
   ],
   dest: `${DIR.BUILD}${DIR.PATH}/img`
 };
