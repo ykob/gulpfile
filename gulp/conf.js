@@ -177,7 +177,13 @@ module.exports.imagemin = {
     `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`,
     `!${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
   ],
-  dest: `${DIR.BUILD}${DIR.PATH}/img`
+  dest: `${DIR.BUILD}${DIR.PATH}/img`,
+  opts: {
+    mozjpeg: {
+      quality: 80,
+      progressive: true,
+    }
+  }
 };
 
 module.exports.clean = {

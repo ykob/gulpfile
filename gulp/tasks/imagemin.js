@@ -10,10 +10,9 @@ gulp.task('imagemin', () => {
     .pipe($.imagemin(
       [
         pngquant(),
-        mozjpeg()
+        mozjpeg(conf.opts.mozjpeg)
       ],
       {
-        progressive: true,
         svgoPlugins: [{removeViewBox: false}]
       }
     ))
