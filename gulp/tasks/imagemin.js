@@ -10,11 +10,9 @@ gulp.task('imagemin', () => {
     .pipe($.imagemin(
       [
         pngquant(),
-        mozjpeg(conf.opts.mozjpeg)
-      ],
-      {
-        svgoPlugins: [{removeViewBox: false}]
-      }
+        mozjpeg(conf.opts.mozjpeg),
+        $.imagemin.svgo(conf.opts.svgo),
+      ]
     ))
     .pipe($.rename(path => {
       path.dirname = path.dirname.replace('img', '.');

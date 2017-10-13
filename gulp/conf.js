@@ -182,7 +182,13 @@ module.exports.imagemin = {
     mozjpeg: {
       quality: 80,
       progressive: true,
-    }
+    },
+    svgo: {
+      plugins: [
+        { removeViewBox: false },
+        { cleanupIDs: true },
+      ]
+    },
   }
 };
 
