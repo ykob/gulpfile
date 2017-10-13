@@ -179,6 +179,10 @@ module.exports.imagemin = {
   ],
   dest: `${DIR.BUILD}${DIR.PATH}/img`,
   opts: {
+    pngquant: {
+      quality: 80,
+      speed: 1,
+    },
     mozjpeg: {
       quality: 80,
       progressive: true,

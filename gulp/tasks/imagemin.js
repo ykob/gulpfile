@@ -9,7 +9,7 @@ gulp.task('imagemin', () => {
   return gulp.src(conf.src)
     .pipe($.imagemin(
       [
-        pngquant(),
+        pngquant(conf.opts.pngquant),
         mozjpeg(conf.opts.mozjpeg),
         $.imagemin.svgo(conf.opts.svgo),
       ]
