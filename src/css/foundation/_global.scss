@@ -14,6 +14,7 @@ img {
 }
 input[type=text], button, select, textarea {
   appearance: none;
+  border: 0;
   border-radius: 0;
 }
 select::-ms-expand {
