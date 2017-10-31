@@ -212,6 +212,7 @@ module.exports.sitemap = {
   ],
   opts: {
     siteUrl: DOMAIN,
+    fileName: 'sitemap-static.xml',
     mappings: [
       {
         pages: [`index.html`],
