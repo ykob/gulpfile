@@ -59,6 +59,14 @@ gulp.task('build', cb => {
   );
 });
 
+gulp.task('buildCss', cb => {
+  runSequence(
+    'sass',
+    'cleanCss',
+    cb
+  );
+});
+
 gulp.task('buildScript', cb => {
   runSequence(
     'browserify',
