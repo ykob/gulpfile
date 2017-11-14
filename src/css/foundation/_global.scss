@@ -26,7 +26,7 @@ select::-ms-expand {
 }
 input::selection,
 textarea::selection {
-  color: $color-basic;
+  color: $color-text-basic;
   background: rgba(0, 0, 0, 0.2);
 }
 ::-webkit-input-placeholder {
