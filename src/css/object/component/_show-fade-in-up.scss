@@ -1,0 +1,18 @@
+.c-show-fade-in-up {
+  opacity: 0;
+  backface-visibility: hidden;
+  transition-duration: 1.2s;
+  transition-delay: .4s;
+  transition-timing-function: $easeOutCirc;
+  transition-property: opacity, transform;
+  @include l-more-than-mobile {
+    transform: translateY(80px);
+  }
+  @include l-mobile {
+    transform: translateY(40px);
+  }
+  &.is-shown {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,11 @@
+.c-show-fade-in {
+  opacity: 0;
+  backface-visibility: hidden;
+  transition-duration: 1.2s;
+  transition-delay: .4s;
+  transition-timing-function: $easeOutCirc;
+  transition-property: opacity;
+  &.is-shown {
+    opacity: 1;
+  }
+}
