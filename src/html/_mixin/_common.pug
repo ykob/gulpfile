@@ -22,6 +22,6 @@ mixin splitStr(str, className)
     var strArr = str.split('');
     var html = '';
     for (var i = 0; i < strArr.length; i++) {
-      html += `<span class="${className} u-d-ib">${(strArr[i] == ' ') ? '&nbsp' : strArr[i] }</span>`;
+      html += `<span class="${className} c-split-str">${(strArr[i] == ' ') ? '&nbsp' : strArr[i] }</span>`;
     }
   |!{html}
