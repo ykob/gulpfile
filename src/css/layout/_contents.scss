@@ -1,3 +1,13 @@
 .l-contents {
-  overflow: hidden;
+  color: $color-text-basic;
+  @include fontSizeAll(13, 13, 12);
+  @include l-pc {
+    line-height: (32 / 13);
+  }
+  @include l-tablet {
+    line-height: (32 / 13);
+  }
+  @include l-mobile {
+    line-height: (48 / 24);
+  }
 }
