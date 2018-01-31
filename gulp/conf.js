@@ -3,7 +3,7 @@
 
 const DOMAIN = module.exports.DOMAIN = 'http://www.xxx.com';
 const DIR = module.exports.DIR =  {
-  PATH: '',
+  PATH: '', // 語尾にスラッシュはつけない
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'build'
@@ -13,7 +13,7 @@ module.exports.serve = {
   dest: {
     //tunnel: 'test',
     notify: false,
-    startPath: DIR.PATH,
+    startPath: `${DIR.PATH}/`,
     ghostMode: false,
     server: {
       baseDir: DIR.DEST,
