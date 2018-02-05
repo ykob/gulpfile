@@ -9,6 +9,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   // font-feature-settings: 'palt';
 }
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
 img {
   vertical-align: top;
 }
