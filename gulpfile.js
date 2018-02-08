@@ -7,6 +7,7 @@ const reload = browserSync.reload;
 const DIR = require('./gulp/conf').DIR;
 
 requireDir('./gulp/tasks');
+const $ = require('./gulp/plugins');
 
 gulp.task('predefault', cb => {
   runSequence(
@@ -18,28 +19,32 @@ gulp.task('predefault', cb => {
 });
 
 gulp.task('default', ['predefault'], () => {
-  gulp.watch(
-    [`./${DIR.SRC}/**/*.pug`],
-    reload
-  );
+  $.watch(
+    [
+      `./${DIR.SRC}/**/*.{scss,sass}`
+    ],
+    () => {
+      gulp.start(['sass'])
+    }
+  ).on('change', reload);
 
-  gulp.watch(
-    [`./${DIR.SRC}/**/*.{scss,sass}`],
-    ['sass', reload]
-  );
+  $.watch(
+    [`./${DIR.SRC}/**/*.pug`]
+  ).on('change', reload);
 
-  gulp.watch(
-    [`./${DIR.DEST}/**/*.js`],
-    reload
-  );
+  $.watch(
+    [`./${DIR.DEST}/**/*.js`]
+  ).on('change', reload);
 
-  gulp.watch(
+  $.watch(
     [
       `./${DIR.SRC}/img/**/*.*`,
-      `./${DIR.SRC}/font/**/*.*`,
+      `./${DIR.SRC}/font/**/*.*`
     ],
-    ['copyToDest', reload]
-  );
+    () => {
+      gulp.start(['copyToDest'])
+    }
+  ).on('change', reload);
 });
 
 gulp.task('build', cb => {
