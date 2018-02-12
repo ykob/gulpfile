@@ -20,9 +20,7 @@ gulp.task('predefault', cb => {
 
 gulp.task('default', ['predefault'], () => {
   $.watch(
-    [
-      `./${DIR.SRC}/**/*.{scss,sass}`
-    ],
+    [`./${DIR.SRC}/**/*.{scss,sass}`],
     () => {
       gulp.start(['sass'])
     }
