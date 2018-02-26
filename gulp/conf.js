@@ -143,7 +143,7 @@ module.exports.copy = {
     ],
     dest: `${DIR.BUILD}`,
     opts: {
-      base: `${DIR.DEST}${DIR.PATH}`
+      base: `${DIR.DEST}`
     }
   },
   php: {
