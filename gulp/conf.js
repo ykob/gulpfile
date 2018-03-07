@@ -129,6 +129,7 @@ module.exports.copy = {
     src: [
       `${DIR.SRC}/img/**/*.*`,
       `${DIR.SRC}/font/**/*.*`,
+      `${DIR.SRC}/json/**/*.*`,
     ],
     dest: `${DIR.DEST}${DIR.PATH}`,
     opts: {
@@ -140,6 +141,7 @@ module.exports.copy = {
       `${DIR.DEST}${DIR.PATH}/img/**/*.ico`,
       `${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
       `${DIR.DEST}${DIR.PATH}/font/**/*.*`,
+      `${DIR.DEST}${DIR.PATH}/json/**/*.*`,
     ],
     dest: `${DIR.BUILD}`,
     opts: {

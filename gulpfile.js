@@ -41,7 +41,8 @@ gulp.task('default', ['predefault'], () => {
   $.watch(
     [
       `./${DIR.SRC}/img/**/*.*`,
-      `./${DIR.SRC}/font/**/*.*`
+      `./${DIR.SRC}/font/**/*.*`,
+      `./${DIR.SRC}/json/**/*.*`,
     ],
     () => {
       gulp.start(['copyToDest'])
