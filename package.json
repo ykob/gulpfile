@@ -52,6 +52,7 @@
     "yargs": "^10.1.1"
   },
   "dependencies": {
+    "easing-js": "git://github.com/danro/easing-js.git",
     "js-util": "git://github.com/ykob/js-util.git",
     "jstransformer-markdown-it": "^2.0.0"
   }
