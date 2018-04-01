@@ -65,6 +65,14 @@ gulp.task('build', cb => {
   );
 });
 
+gulp.task('buildHtml', cb => {
+  runSequence(
+    'pug',
+    'replaceHtml',
+    cb
+  );
+});
+
 gulp.task('buildCss', cb => {
   runSequence(
     'sass',
