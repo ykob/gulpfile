@@ -8,7 +8,10 @@ title #{titleMerge}
 meta(name="viewport", content="width=device-width,initial-scale=1")
 meta(name="description", content=page.description)
 meta(name="keywords", content=keywordsMerge)
-link(rel="stylesheet" href=data.meta.path + "/css/main.css")
+
+style.
+  .l-page { visibility: hidden; }
+link(rel="preload" as="style" href=data.meta.path + "/css/main.css" onload="this.onload=null;this.rel='stylesheet'")
 
 link(rel="icon" href=data.meta.path + "/img/common/icon.ico")
 link(rel="apple-touch-icon" sizes="180x180" href=data.meta.path + "/img/common/app_icon.png")
