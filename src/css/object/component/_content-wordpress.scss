@@ -34,9 +34,17 @@
     max-width: 100%;
     height: auto;
     display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .wp-caption {
     width: auto !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    img {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
   .wp-caption-text {
     margin-top: 1rem;
