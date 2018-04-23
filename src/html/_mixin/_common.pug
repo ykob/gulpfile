@@ -1,4 +1,4 @@
-mixin picture(srcArray, alt)
+mixin picture(srcArray)
   picture(
     class = attributes.className
   )
@@ -14,7 +14,7 @@ mixin picture(srcArray, alt)
         )
     img(
       src = srcArray[0],
-      alt = ""
+      alt = (attributes.alt) ? attributes.alt : ''
     )
 
 mixin splitStr(str, className)
