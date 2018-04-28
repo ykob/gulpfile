@@ -1,5 +1,5 @@
 .l-contents {
-  color: $color-text-basic;
+  color: $color-text;
   @include fontSizeAll(13, 13, 12);
   @include l-pc {
     line-height: (32 / 13);
