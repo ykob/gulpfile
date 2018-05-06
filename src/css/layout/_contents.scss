@@ -1,10 +1,7 @@
 .l-contents {
   color: $color-text;
   @include fontSizeAll(13, 13, 12);
-  @include l-pc {
-    line-height: (32 / 13);
-  }
-  @include l-tablet {
+  @include l-more-than-mobile {
     line-height: (32 / 13);
   }
   @include l-mobile {
