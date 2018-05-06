@@ -13,7 +13,7 @@
       transition-delay: ($i - 1) * .1 + .3s;
     }
   }
-  .is-leaved & {
+  .is-leaved-content & {
     opacity: 0;
     @for $i from 1 through 10 {
       &--#{str-slice('00' + $i, -2)} {

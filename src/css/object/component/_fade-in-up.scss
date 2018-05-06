@@ -58,7 +58,7 @@
       animation-delay: ($i - 1) * .1 + .3s;
     }
   }
-  .is-leaved & {
+  .is-leaved-content & {
     opacity: 0;
     animation-duration: .8s;
     @include l-more-than-mobile {
