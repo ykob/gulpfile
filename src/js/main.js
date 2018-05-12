@@ -15,7 +15,7 @@ const init = () => {
 }
 
 // preload stylesheet other than Google Chrome browser.
-if (ua.indexOf('Chrome') < 0) link.rel = 'stylesheet';
+if (ua.indexOf('Edge') > -1 || ua.indexOf('Chrome') < 0) link.rel = 'stylesheet';
 
 setTimeout(() => {
   // Making viewport units (vh|vw|vmin|vmax) work properly in Mobile Safari.
