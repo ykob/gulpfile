@@ -5,10 +5,10 @@
 @mixin fontSizeMobile($size: 14) {
   @include fontSize($size);
   @media all and (max-width: $break-point-mobile-p) {
-    font-size: $size / 320 * 100vw;
+    font-size: $size / 375 * 100vw;
   }
   @media all and (min-width: $break-point-mobile-p + 1) {
-    font-size: $size / 320 * 414px;
+    font-size: $size / 375 * 414px;
   }
 }
 @mixin fontSizeAll($sizePc, $sizeTab, $sizeSp) {
