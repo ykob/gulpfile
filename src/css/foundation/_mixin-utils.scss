@@ -36,9 +36,6 @@
     font-size: $break-point-tablet-p / 100 * $vw;
   }
 }
-@mixin grid($property, $num, $add: 0px) {
-  #{$property}: calc(#{$num / 40 * 100}vw - (100vw - 100%) / #{40 / $num} + #{$add});
-}
 @mixin clearfix {
   &:before,
   &:after {
