@@ -3,7 +3,9 @@
 
 const DOMAIN = module.exports.DOMAIN = 'http://www.xxx.com';
 const DIR = module.exports.DIR =  {
-  PATH: '', // 語尾にスラッシュはつけない
+   // 語尾にスラッシュはつけない
+  PATH: '',
+  CMS: '/cms/wp-content/themes/oginotax.com',
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'build'
@@ -111,7 +113,10 @@ module.exports.replace = {
 
 module.exports.cleanCss = {
   src: `${DIR.DEST}${DIR.PATH}/css/main.css`,
-  dest: `${DIR.BUILD}${DIR.PATH}/css`
+  dest: {
+    static: `${DIR.BUILD}${DIR.PATH}/css`,
+    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}`,
+  },
 };
 
 module.exports.uglify = {
@@ -119,7 +124,10 @@ module.exports.uglify = {
     `./${DIR.DEST}${DIR.PATH}/js/vendor.js`,
     `./${DIR.DEST}${DIR.PATH}/js/main.js`,
   ],
-  dest: `${DIR.BUILD}${DIR.PATH}/js`,
+  dest: {
+    static: `${DIR.BUILD}${DIR.PATH}/js`,
+    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/js`,
+  },
   opts: {
   }
 };
@@ -143,7 +151,10 @@ module.exports.copy = {
       `${DIR.DEST}${DIR.PATH}/font/**/*.*`,
       `${DIR.DEST}${DIR.PATH}/json/**/*.*`,
     ],
-    dest: `${DIR.BUILD}`,
+    dest: {
+      static: `${DIR.BUILD}${DIR.PATH}`,
+      cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets`,
+    },
     opts: {
       base: `${DIR.DEST}`
     }
@@ -151,11 +162,22 @@ module.exports.copy = {
   php: {
     src: [
       `${DIR.SRC}/html/**/*.php`,
-      `${DIR.SRC}/html/cms/**/*.*`,
     ],
-    dest: `${DIR.BUILD}${DIR.PATH}`,
+    dest: {
+      static: `${DIR.BUILD}${DIR.PATH}`,
+      cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/php`,
+    },
     opts: {
       base: `${DIR.SRC}/html/`
+    }
+  },
+  cms: {
+    src: [
+      `${DIR.SRC}/wp-theme/**/*.php`,
+    ],
+    dest: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}`,
+    opts: {
+      base: `${DIR.SRC}/wp-theme/`
     }
   }
 };
@@ -165,7 +187,10 @@ module.exports.imagemin = {
     `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`,
     `!${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
   ],
-  dest: `${DIR.BUILD}${DIR.PATH}/img`,
+  dest: {
+    static: `${DIR.BUILD}${DIR.PATH}/img`,
+    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/img`,
+  },
   opts: {
     pngquant: {
       quality: 80,

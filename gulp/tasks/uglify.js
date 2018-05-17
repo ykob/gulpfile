@@ -5,6 +5,7 @@ const $ = require('../plugins');
 const conf = require('../conf').uglify;
 
 gulp.task('uglify', (cb) => {
+  const dest = (process.env.NODE_ENV === 'production') ? conf.dest.cms : conf.dest.static;
   pump(
     [
       gulp.src(conf.src),
@@ -12,7 +13,7 @@ gulp.task('uglify', (cb) => {
       $.rename({
         suffix: '.min'
       }),
-      gulp.dest(conf.dest)
+      gulp.dest(dest)
     ],
     cb
   );
