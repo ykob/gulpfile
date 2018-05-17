@@ -8,7 +8,8 @@
   "private": false,
   "scripts": {
     "start": "gulp",
-    "build": "NODE_ENV=production gulp build"
+    "buildDev": "cross-env NODE_ENV=development gulp build",
+    "build": "cross-env NODE_ENV=production gulp build"
   },
   "engines": {
     "node": "8.9.4"
@@ -20,6 +21,7 @@
     "babelify": "^8.0.0",
     "browser-sync": "^2.23.5",
     "browserify": "^16.1.1",
+    "cross-env": "^5.1.5",
     "del": "^3.0.0",
     "envify": "^4.1.0",
     "event-stream": "^3.3.4",
