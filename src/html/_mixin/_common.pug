@@ -17,11 +17,11 @@ mixin picture(srcArray)
       alt = (attributes.alt) ? attributes.alt : ''
     )
 
-mixin splitStr(str, className)
+mixin splitStr(str)
   -
     var strArr = str.split('');
     var html = '';
     for (var i = 0; i < strArr.length; i++) {
-      html += `<span class="c-split-str js-split-str ${className}">${(strArr[i] == ' ') ? '&nbsp;' : strArr[i] }</span>`;
+      html += `<span class="c-split-str js-split-str ${attributes.class}">${(strArr[i] == ' ') ? '&nbsp;' : strArr[i] }</span>`;
     }
   |!{html}
