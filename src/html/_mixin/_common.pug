@@ -20,8 +20,10 @@ mixin picture(srcArray)
 mixin splitStr(str)
   -
     var strArr = str.split('');
-    var html = '';
-    for (var i = 0; i < strArr.length; i++) {
-      html += `<span class="c-split-str js-split-str ${attributes.class}">${(strArr[i] == ' ') ? '&nbsp;' : strArr[i] }</span>`;
-    }
-  |!{html}
+    var extraClass = (attributes.class) ? ` ${attributes.class}` : '';
+
+  - for (var i = 0; i < strArr.length; i++) {
+    - var typo = (strArr[i] == ' ') ? '&nbsp;' : strArr[i];
+    span(class=`c-split-str js-split-str${extraClass}`)
+      |!{typo}
+  - }
