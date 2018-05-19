@@ -2,12 +2,12 @@ mixin svg(width, widthBase, heightBase)
   svg(
     xmlns = "http://www.w3.org/2000/svg",
     role = (attributes.role) ? attributes.role : 'img',
-    aria-labelledby = (attributes.title) ? `${attributes.id}-title` : null,
+    aria-labelledby != `${attributes.id}-title`,
     width = width,
     height = Math.ceil(width * heightBase / widthBase),
     viewBox = `0 0 ${widthBase} ${heightBase}`,
-    id = attributes.id,
-    class = attributes.class,
+    id != attributes.id,
+    class != attributes.class,
   )
     if (attributes.title)
       title(
@@ -19,7 +19,7 @@ mixin svg(width, widthBase, heightBase)
 mixin iconFacebook(width)
   +svg(width, 117.7, 226.6)(
     title = (attributes.title) ? attributes.title : 'Facebook',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-facebook',
     class = 'c-icon-facebook'
     )
@@ -28,7 +28,7 @@ mixin iconFacebook(width)
 mixin iconFacebookSquare(width)
   +svg(width, 266.9, 266.9)(
     title = (attributes.title) ? attributes.title : 'Facebook',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-facebook',
     class = 'c-icon-facebook'
     )
@@ -37,7 +37,7 @@ mixin iconFacebookSquare(width)
 mixin iconTwitter(width)
   +svg(width, 273.4, 222.2)(
     title = (attributes.title) ? attributes.title : 'Twitter',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-twitter',
     class = 'c-icon-twitter'
     )
@@ -46,7 +46,7 @@ mixin iconTwitter(width)
 mixin iconInstagram(width)
   +svg(width, 24, 24)(
     title = (attributes.title) ? attributes.title : 'Instagram',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-instagram',
     class = 'c-icon-instagram'
     )
@@ -55,7 +55,7 @@ mixin iconInstagram(width)
 mixin iconInstagram2(width)
   +svg(width, 14, 14)(
     title = (attributes.title) ? attributes.title : 'Instagram2',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-instagram',
     class = 'c-icon-instagram2'
     )
@@ -64,7 +64,7 @@ mixin iconInstagram2(width)
 mixin iconYoutube(width)
   +svg(width, 24, 24)(
     title = (attributes.title) ? attributes.title : 'Youtube',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-youtube',
     class = 'c-icon-youtube'
     )
@@ -73,7 +73,7 @@ mixin iconYoutube(width)
 mixin iconHatenaBookmark(width)
   +svg(width, 272.8, 227.3)(
     title = (attributes.title) ? attributes.title : 'はてなブックマーク',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-hatena-bookmark',
     class = 'c-icon-hatena'
     )
@@ -82,7 +82,7 @@ mixin iconHatenaBookmark(width)
 mixin iconPocket(width)
   +svg(width, 68.8, 58.9)(
     title = (attributes.title) ? attributes.title : 'Pocket',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-pocket',
     class = 'c-icon-pocket'
     )
@@ -91,7 +91,7 @@ mixin iconPocket(width)
 mixin iconLineAt(width)
   +svg(width, 14, 14)(
     title = (attributes.title) ? attributes.title : 'Line@',
-    role = attributes.role,
+    role != attributes.role,
     id = (attributes.id) ? attributes.id : 'icon-line-at',
     class = 'c-icon-line-at'
     )
