@@ -4,13 +4,22 @@ const $ = require('../plugins');
 const conf = require('../conf').cleanCss;
 
 gulp.task('cleanCss', () => {
-  const NODE_ENV = process.env.NODE_ENV;
-  const dest = (NODE_ENV === 'production') ? conf.dest.cms : conf.dest.static;
-  const rename = (NODE_ENV === 'production')
+  const isProduction = process.env.NODE_ENV === 'production';
+  const dest = (isProduction) ? conf.dest.cms : conf.dest.static;
+  const rename = (isProduction)
     ? { basename: 'style' }
     : { suffix: '.min' };
-  return gulp.src(conf.src)
-    .pipe($.cleanCss())
-    .pipe($.rename(rename))
-    .pipe(gulp.dest(dest));
+  if (isProduction) {
+    const regBgImg = new RegExp(/(background-image: url\(").*?(\/img)(.*)/g);
+    return gulp.src(conf.src)
+      .pipe($.replace(regBgImg, '$1./assets$2$3'))
+      .pipe($.cleanCss())
+      .pipe($.rename(rename))
+      .pipe(gulp.dest(dest));
+  } else {
+    return gulp.src(conf.src)
+      .pipe($.cleanCss())
+      .pipe($.rename(rename))
+      .pipe(gulp.dest(dest));
+  }
 });
