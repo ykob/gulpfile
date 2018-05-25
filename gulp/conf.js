@@ -5,7 +5,7 @@ const DOMAIN = module.exports.DOMAIN = 'http://www.xxx.com';
 const DIR = module.exports.DIR =  {
    // 語尾にスラッシュはつけない
   PATH: '',
-  CMS: '/cms/wp-content/themes/oginotax.com',
+  CMS: '/cms/wp-content/themes/xxx.com',
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'build'
