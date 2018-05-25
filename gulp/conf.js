@@ -188,8 +188,8 @@ module.exports.imagemin = {
     `!${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
   ],
   dest: {
-    static: `${DIR.BUILD}${DIR.PATH}/img`,
-    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/img`,
+    static: `${DIR.BUILD}${DIR.PATH}`,
+    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets`,
   },
   opts: {
     pngquant: {
