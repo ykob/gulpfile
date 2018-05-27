@@ -3,12 +3,11 @@
   font-size: $size / 16 * 1rem;
 }
 @mixin fontSizeMobile($size: 14) {
-  @include fontSize($size);
+  @media all and (min-width: $break-point-mobile-p + 1) and (max-width: $break-point-tablet-p - 1px) {
+    font-size: round($size / 375 * 414px);
+  }
   @media all and (max-width: $break-point-mobile-p) {
     font-size: $size / 375 * 100vw;
-  }
-  @media all and (min-width: $break-point-mobile-p + 1) {
-    font-size: $size / 375 * 414px;
   }
 }
 @mixin fontSizeAll($sizePc, $sizeTab, $sizeSp) {
@@ -18,9 +17,7 @@
   @include l-tablet {
     @include fontSize($sizeTab);
   }
-  @include l-mobile {
-    @include fontSizeMobile($sizeSp);
-  }
+  @include fontSizeMobile($sizeSp);
 }
 @mixin flexFontSize($vw) {
   @include l-pc-l {
