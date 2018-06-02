@@ -15,7 +15,7 @@ These are my original asset for web development with gulp.
 | command name | purpose |
 | --- | --- |
 | `gulp` | 開発時に実行するコマンド。<br>[Brosersync](https://github.com/browsersync/browser-sync)によってローカルサーバーが起動し、開発用ファイルの更新を監視する。 |
-| `gulp build` | 納品・公開用のファイルを生成するコマンド。 |
+| `npm run build` | 納品・公開用のファイルを生成するコマンド。 |
 
 ## Breakpoints
 
