@@ -9,12 +9,12 @@ gulp.task('uglify', (cb) => {
   const isProduction = process.env.NODE_ENV === 'production';
   const dest = (isProduction) ? conf.dest.cms : conf.dest.static;
   if (isProduction) {
-    const regBgImg = new RegExp(/([\'\"]).*?(\/img)(.*)/g);
+    const regImg = new RegExp(/([\'\"]).*?(\/img)(.*)/g);
     pump(
       [
         gulp.src(conf.src),
+        $.replace(regImg, '$1' + DIR.PATH + DIR.CMS + '/assets$2$3'),
         $.uglify(conf.opts),
-        $.replace(regBgImg, '$1' + DIR.PATH + DIR.CMS + '/assets$2$3'),
         $.rename({
           suffix: '.min'
         }),
