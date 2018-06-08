@@ -107,7 +107,6 @@ module.exports.replace = {
       `${DIR.DEST}${DIR.PATH}/**/*.html`
     ],
     dest: `${DIR.BUILD}${DIR.PATH}`,
-    path: `${DIR.PATH}`
   }
 };
 
