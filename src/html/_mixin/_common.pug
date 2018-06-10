@@ -18,12 +18,9 @@ mixin picture(srcArray)
     )
 
 mixin splitStr(str)
-  -
-    var strArr = str.split('');
-    var extraClass = (attributes.class) ? ` ${attributes.class}` : '';
-
+  - var strArr = str.split('');
   - for (var i = 0; i < strArr.length; i++) {
     - var typo = (strArr[i] == ' ') ? '&nbsp;' : strArr[i];
-    span(class=`c-split-str js-split-str${extraClass}`)
+    span(class='c-split-str')&attributes(attributes)
       |!{typo}
   - }
