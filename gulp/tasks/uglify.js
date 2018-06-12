@@ -9,11 +9,11 @@ gulp.task('uglify', (cb) => {
   const isProduction = process.env.NODE_ENV === 'production';
   const dest = (isProduction) ? conf.dest.cms : conf.dest.static;
   if (isProduction) {
-    const reg = new RegExp(/([\'\"]).*?(\/img|\/pdf)(.*)/g);
+    const reg = new RegExp(/([\'|\"])(\/img|\/pdf)/g);
     pump(
       [
         gulp.src(conf.src),
-        $.replace(reg, '$1' + DIR.PATH + DIR.CMS + '/assets$2$3'),
+        $.replace(reg, '$1' + DIR.PATH + DIR.CMS + '/assets$2'),
         $.uglify(conf.opts),
         $.rename({
           suffix: '.min'

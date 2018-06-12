@@ -10,9 +10,9 @@ gulp.task('cleanCss', () => {
     ? { basename: 'style' }
     : { suffix: '.min' };
   if (isProduction) {
-    const regBgImg = new RegExp(/(url\().*?(\/img)(.*?)(\))/g);
+    const reg = new RegExp(/(url)(\(\"|\(\'|\()(.*?)([img|font])(.*?)(\"\)|\'\)|\))/g);
     return gulp.src(conf.src)
-      .pipe($.replace(regBgImg, '$1./assets$2$3$4'))
+      .pipe($.replace(reg, '$1$2./assets/$4$5$6'))
       .pipe($.cleanCss())
       .pipe($.rename(rename))
       .pipe(gulp.dest(dest));
