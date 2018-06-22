@@ -1,0 +1,80 @@
+.u-p {
+  @for $i from 0 through 40 {
+    &-t {
+      &-#{$i * 5} {
+        @include l-pc-l {
+          padding-top: floor(($i * 5) * 1px);
+        }
+        @include l-pc-s {
+          padding-top: floor(($i * 4.16) * 1px);
+        }
+        @include l-tablet {
+          padding-top: floor(($i * 3.33) * 1px);
+        }
+        @include l-mobile {
+          padding-top: floor(($i * 2.5) * 1px);
+        }
+      }
+      &-a {
+        padding-top: auto;
+      }
+    }
+    &-b {
+      &-#{$i * 5} {
+        @include l-pc-l {
+          padding-bottom: floor(($i * 5) * 1px);
+        }
+        @include l-pc-s {
+          padding-bottom: floor(($i * 4.16) * 1px);
+        }
+        @include l-tablet {
+          padding-bottom: floor(($i * 3.33) * 1px);
+        }
+        @include l-mobile {
+          padding-bottom: floor(($i * 2.5) * 1px);
+        }
+      }
+      &-a {
+        padding-bottom: auto;
+      }
+    }
+    &-r {
+      &-#{$i * 5} {
+        @include l-pc-l {
+          padding-right: floor(($i * 5) * 1px);
+        }
+        @include l-pc-s {
+          padding-right: floor(($i * 4.16) * 1px);
+        }
+        @include l-tablet {
+          padding-right: floor(($i * 3.33) * 1px);
+        }
+        @include l-mobile {
+          padding-right: floor(($i * 2.5) * 1px);
+        }
+      }
+      &-a {
+        padding-right: auto;
+      }
+    }
+    &-l {
+      &-#{$i * 5} {
+        @include l-pc-l {
+          padding-left: floor(($i * 5) * 1px);
+        }
+        @include l-pc-s {
+          padding-left: floor(($i * 4.16) * 1px);
+        }
+        @include l-tablet {
+          padding-left: floor(($i * 3.33) * 1px);
+        }
+        @include l-mobile {
+          padding-left: floor(($i * 2.5) * 1px);
+        }
+      }
+      &-a {
+        padding-left: auto;
+      }
+    }
+  }
+}
