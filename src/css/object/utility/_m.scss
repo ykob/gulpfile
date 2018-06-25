@@ -2,17 +2,11 @@
   @for $i from 0 through 40 {
     &-t {
       &-#{$i * 5} {
-        @include l-pc-l {
+        @include l-more-than-mobile {
           margin-top: floor(($i * 5) * 1px);
         }
-        @include l-pc-s {
-          margin-top: floor(($i * 4.16) * 1px);
-        }
-        @include l-tablet {
-          margin-top: floor(($i * 3.33) * 1px);
-        }
         @include l-mobile {
-          margin-top: floor(($i * 2.5) * 1px);
+          margin-top: floor(($i * 4) * 1px);
         }
       }
       &-a {
@@ -21,17 +15,11 @@
     }
     &-b {
       &-#{$i * 5} {
-        @include l-pc-l {
+        @include l-more-than-mobile {
           margin-bottom: floor(($i * 5) * 1px);
         }
-        @include l-pc-s {
-          margin-bottom: floor(($i * 4.16) * 1px);
-        }
-        @include l-tablet {
-          margin-bottom: floor(($i * 3.33) * 1px);
-        }
         @include l-mobile {
-          margin-bottom: floor(($i * 2.5) * 1px);
+          margin-bottom: floor(($i * 4) * 1px);
         }
       }
       &-a {
@@ -40,17 +28,11 @@
     }
     &-r {
       &-#{$i * 5} {
-        @include l-pc-l {
+        @include l-more-than-mobile {
           margin-right: floor(($i * 5) * 1px);
         }
-        @include l-pc-s {
-          margin-right: floor(($i * 4.16) * 1px);
-        }
-        @include l-tablet {
-          margin-right: floor(($i * 3.33) * 1px);
-        }
         @include l-mobile {
-          margin-right: floor(($i * 2.5) * 1px);
+          margin-right: floor(($i * 4) * 1px);
         }
       }
       &-a {
@@ -59,17 +41,11 @@
     }
     &-l {
       &-#{$i * 5} {
-        @include l-pc-l {
+        @include l-more-than-mobile {
           margin-left: floor(($i * 5) * 1px);
         }
-        @include l-pc-s {
-          margin-left: floor(($i * 4.16) * 1px);
-        }
-        @include l-tablet {
-          margin-left: floor(($i * 3.33) * 1px);
-        }
         @include l-mobile {
-          margin-left: floor(($i * 2.5) * 1px);
+          margin-left: floor(($i * 4) * 1px);
         }
       }
       &-a {
