@@ -13,7 +13,6 @@ const DIR = module.exports.DIR =  {
 
 module.exports.serve = {
   dest: {
-    //tunnel: 'test',
     notify: false,
     startPath: `${DIR.PATH}/`,
     ghostMode: false,
@@ -26,7 +25,6 @@ module.exports.serve = {
     }
   },
   build: {
-    //tunnel: 'test',
     notify: false,
     startPath: DIR.PATH,
     ghostMode: false,
