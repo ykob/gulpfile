@@ -5,3 +5,7 @@
     var zeros = Array(digit + 1).join('0');
     return (zeros + num).slice(-digit);
   };
+
+  var ucfirst = function(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
