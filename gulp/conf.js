@@ -171,6 +171,7 @@ module.exports.copy = {
   cms: {
     src: [
       `${DIR.SRC}/wp-theme/**/*.php`,
+      `${DIR.SRC}/wp-theme/**/screenshot.png`,
     ],
     dest: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}`,
     opts: {
