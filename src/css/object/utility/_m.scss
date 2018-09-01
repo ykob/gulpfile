@@ -1,6 +1,6 @@
 .u-m {
-  @for $i from 0 through 40 {
-    &-t {
+  &-t {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-top: floor(($i * 5) * 1px);
@@ -9,11 +9,13 @@
           margin-top: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        margin-top: auto;
-      }
     }
-    &-b {
+    &-a {
+      margin-top: auto;
+    }
+  }
+  &-b {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-bottom: floor(($i * 5) * 1px);
@@ -22,11 +24,13 @@
           margin-bottom: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        margin-bottom: auto;
-      }
     }
-    &-r {
+    &-a {
+      margin-bottom: auto;
+    }
+  }
+  &-r {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-right: floor(($i * 5) * 1px);
@@ -35,11 +39,13 @@
           margin-right: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        margin-right: auto;
-      }
     }
-    &-l {
+    &-a {
+      margin-right: auto;
+    }
+  }
+  &-l {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-left: floor(($i * 5) * 1px);
@@ -48,9 +54,9 @@
           margin-left: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        margin-left: auto;
-      }
+    }
+    &-a {
+      margin-left: auto;
     }
   }
 }

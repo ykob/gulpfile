@@ -1,6 +1,6 @@
-.u-m {
-  @for $i from 0 through 40 {
-    &-t {
+.u-p {
+  &-t {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           padding-top: floor(($i * 5) * 1px);
@@ -9,11 +9,13 @@
           padding-top: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        padding-top: auto;
-      }
     }
-    &-b {
+    &-a {
+      padding-top: auto;
+    }
+  }
+  &-b {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           padding-bottom: floor(($i * 5) * 1px);
@@ -22,11 +24,13 @@
           padding-bottom: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        padding-bottom: auto;
-      }
     }
-    &-r {
+    &-a {
+      padding-bottom: auto;
+    }
+  }
+  &-r {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           padding-right: floor(($i * 5) * 1px);
@@ -35,11 +39,13 @@
           padding-right: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        padding-right: auto;
-      }
     }
-    &-l {
+    &-a {
+      padding-right: auto;
+    }
+  }
+  &-l {
+    @for $i from 0 through 40 {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           padding-left: floor(($i * 5) * 1px);
@@ -48,9 +54,9 @@
           padding-left: floor(($i * 4) * 1px);
         }
       }
-      &-a {
-        padding-left: auto;
-      }
+    }
+    &-a {
+      padding-left: auto;
     }
   }
 }
