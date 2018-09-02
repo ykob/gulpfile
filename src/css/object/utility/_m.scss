@@ -8,7 +8,7 @@ $count: 40;
           margin-top: floor(($i * 5) * 1px);
         }
         @include l-mobile {
-          margin-top: floor(($i * 4) * 1px);
+          margin-top: floor(($i * 3.33) * 1px);
         }
       }
     }
@@ -23,7 +23,7 @@ $count: 40;
           margin-bottom: floor(($i * 5) * 1px);
         }
         @include l-mobile {
-          margin-bottom: floor(($i * 4) * 1px);
+          margin-bottom: floor(($i * 3.33) * 1px);
         }
       }
     }
@@ -38,7 +38,7 @@ $count: 40;
           margin-right: floor(($i * 5) * 1px);
         }
         @include l-mobile {
-          margin-right: floor(($i * 4) * 1px);
+          margin-right: floor(($i * 3.33) * 1px);
         }
       }
     }
@@ -53,7 +53,7 @@ $count: 40;
           margin-left: floor(($i * 5) * 1px);
         }
         @include l-mobile {
-          margin-left: floor(($i * 4) * 1px);
+          margin-left: floor(($i * 3.33) * 1px);
         }
       }
     }
