@@ -1,6 +1,8 @@
+$count: 40;
+
 .u-m {
   &-t {
-    @for $i from 0 through 40 {
+    @for $i from 0 through $count {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-top: floor(($i * 5) * 1px);
@@ -15,7 +17,7 @@
     }
   }
   &-b {
-    @for $i from 0 through 40 {
+    @for $i from 0 through $count {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-bottom: floor(($i * 5) * 1px);
@@ -30,7 +32,7 @@
     }
   }
   &-r {
-    @for $i from 0 through 40 {
+    @for $i from 0 through $count {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-right: floor(($i * 5) * 1px);
@@ -45,7 +47,7 @@
     }
   }
   &-l {
-    @for $i from 0 through 40 {
+    @for $i from 0 through $count {
       &-#{$i * 5} {
         @include l-more-than-mobile {
           margin-left: floor(($i * 5) * 1px);
