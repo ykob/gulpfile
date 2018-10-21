@@ -1,6 +1,6 @@
 # gulpfile
 
-These are my original asset for web development with gulp.
+It's my asset for Web development with gulp.js.
 
 ## Folders
 
