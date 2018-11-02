@@ -18,24 +18,25 @@ gulp.task('predefault', cb => {
   );
 });
 
-gulp.task('watch-sass', ['sass'], () => {
-  reload();
-});
-
 gulp.task('default', ['predefault'], () => {
   $.watch(
     [`./${DIR.SRC}/**/*.{scss,sass}`],
     () => {
-      gulp.start(['watch-sass'])
+      gulp.start(['sass'])
     }
-  );
+  ).on('change', reload);
 
   $.watch(
     [`./${DIR.SRC}/**/*.pug`]
   ).on('change', reload);
 
   $.watch(
-    [`./${DIR.DEST}/**/*.js`]
+    [
+      `./${DIR.SRC}/**/*.js`,
+    ],
+    () => {
+      gulp.start(['scripts'])
+    }
   ).on('change', reload);
 
   $.watch(
@@ -53,10 +54,11 @@ gulp.task('default', ['predefault'], () => {
 gulp.task('build', cb => {
   runSequence(
     'cleanDest',
-    ['pug', 'sass', 'scripts', 'copyToDest'],
+    ['pug', 'sass', 'copyToDest'],
     'cleanBuild',
     'replaceHtml',
     'cleanCss',
+    'scripts',
     'imagemin',
     ['copyToBuild', 'copyPhpToBuild', 'copyCmsToBuild'],
     'sitemap',
