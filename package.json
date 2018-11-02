@@ -7,23 +7,25 @@
   },
   "private": false,
   "scripts": {
-    "start": "gulp",
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development gulp",
     "buildDev": "cross-env NODE_ENV=development gulp build",
     "build": "cross-env NODE_ENV=production gulp build"
   },
   "engines": {
-    "node": "8.9.4"
+    "node": "10.13.0"
   },
+  "browserslist": [
+    "last 2 version",
+    "IE 11"
+  ],
   "devDependencies": {
     "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
-    "babel-polyfill": "^6.26.0",
-    "babelify": "^10.0.0",
+    "babel-loader": "^8.0.4",
     "browser-sync": "^2.23.5",
-    "browserify": "^16.1.1",
     "cross-env": "^5.1.5",
     "del": "^3.0.0",
-    "envify": "^4.1.0",
     "event-stream": "^4.0.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
@@ -39,21 +41,22 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.0",
     "gulp-sitemap": "^6.0.1",
-    "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^6.0.0",
-    "licensify": "^3.1.3",
     "merge-stream": "^1.0.1",
+    "node-sass": "^4.9.4",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
     "slash": "^2.0.0",
     "vinyl-source-stream": "^2.0.0",
-    "watchify": "^3.9.0",
+    "webpack": "^4.20.2",
+    "webpack-stream": "^5.1.1",
     "yargs": "^12.0.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "easing-js": "git://github.com/danro/easing-js.git",
     "js-util": "git://github.com/ykob/js-util.git",
     "jstransformer-markdown-it": "^2.0.0",
