@@ -12,7 +12,7 @@ requireDir('./gulp/tasks');
 gulp.task('predefault', cb => {
   runSequence(
     'cleanDest',
-    ['pug', 'sass', 'watchify', 'copyToDest'],
+    ['pug', 'sass', 'copyToDest'],
     'serve',
     cb
   );
