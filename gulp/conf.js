@@ -123,19 +123,6 @@ module.exports.cleanCss = {
   },
 };
 
-module.exports.uglify = {
-  src: [
-    `./${DIR.DEST}${DIR.PATH}/js/vendor.js`,
-    `./${DIR.DEST}${DIR.PATH}/js/main.js`,
-  ],
-  dest: {
-    static: `${DIR.BUILD}${DIR.PATH}/js`,
-    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/js`,
-  },
-  opts: {
-  }
-};
-
 module.exports.copy = {
   dest: {
     src: [

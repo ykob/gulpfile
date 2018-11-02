@@ -53,12 +53,11 @@ gulp.task('default', ['predefault'], () => {
 gulp.task('build', cb => {
   runSequence(
     'cleanDest',
-    ['pug', 'sass', 'browserify', 'copyToDest'],
+    ['pug', 'sass', 'scripts', 'copyToDest'],
     'cleanBuild',
     'replaceHtml',
     'cleanCss',
     'imagemin',
-    'uglify',
     ['copyToBuild', 'copyPhpToBuild', 'copyCmsToBuild'],
     'sitemap',
     cb
@@ -77,14 +76,6 @@ gulp.task('buildCss', cb => {
   runSequence(
     'sass',
     'cleanCss',
-    cb
-  );
-});
-
-gulp.task('buildScript', cb => {
-  runSequence(
-    'browserify',
-    'uglify',
     cb
   );
 });
