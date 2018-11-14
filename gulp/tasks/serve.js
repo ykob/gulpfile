@@ -34,7 +34,7 @@ const pugMiddleWare = (req, res, next) => {
     data: data,
     pretty: true,
   });
-  res.end(new Buffer(content));
+  res.end(Buffer.from(content));
 }
 
 gulp.task("serve",()=> {
