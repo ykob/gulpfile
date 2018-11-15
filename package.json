@@ -60,6 +60,7 @@
     "easing-js": "git://github.com/danro/easing-js.git",
     "js-util": "git://github.com/ykob/js-util.git",
     "jstransformer-markdown-it": "^2.0.0",
+    "ua-parser-js": "^0.7.19",
     "viewport-units-buggyfill": "^0.6.2"
   }
 }
