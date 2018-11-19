@@ -3,5 +3,15 @@
     &-#{$i * 5} {
       animation-delay: $i * 0.05s;
     }
+    @include l-more-than-mobile {
+      &-pc-#{$i * 5} {
+        animation-delay: $i * 0.05s;
+      }
+    }
+    @include l-mobile {
+      &-sp-#{$i * 5} {
+        animation-delay: $i * 0.05s;
+      }
+    }
   }
 }
