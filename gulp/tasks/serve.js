@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const yargs = require('yargs').argv;
 const browserSync = require('browser-sync');
 const path = require("path");
 const slash = require('slash');
@@ -38,7 +37,7 @@ const pugMiddleWare = (req, res, next) => {
 }
 
 gulp.task("serve",()=> {
-  if (yargs.build == true) {
+  if (process.env.NODE_ENV == 'production') {
     browserSync(conf.build);
   } else {
     conf.dest.server.middleware = [pugMiddleWare];
