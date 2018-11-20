@@ -1,7 +1,8 @@
 require('@babel/polyfill');
 
-const viewportUnitsBuggyfill = require('viewport-units-buggyfill');
-const sleep = require('js-util/sleep');
+import viewportUnitsBuggyfill from 'viewport-units-buggyfill';
+import UaParser from 'ua-parser-js';
+import sleep from 'js-util/sleep';
 
 const pageId = document.querySelector('.l-page').getAttribute('data-page-id');
 const uaParser = new UaParser();
