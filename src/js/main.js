@@ -4,12 +4,13 @@ const viewportUnitsBuggyfill = require('viewport-units-buggyfill');
 const sleep = require('js-util/sleep');
 
 const pageId = document.querySelector('.l-page').getAttribute('data-page-id');
-const ua = window.navigator.userAgent;
+const uaParser = new UaParser();
 const link = document.querySelector('link[as=style]');
 
 const init = async () => {
-  // preload stylesheet other than Google Chrome browser.
-  if (ua.indexOf('Edge') > -1 || ua.indexOf('Chrome') < 0) link.rel = 'stylesheet';
+  // Preload the stylesheet in browsers that are enabled an attribute link.preload.
+  const browser = uaParser.getBrowser().name;
+  if (browser !== 'Chrome' && browser !== 'Edge') link.rel = 'stylesheet';
 
   await sleep(100);
 
