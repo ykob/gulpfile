@@ -28,7 +28,7 @@ const pugMiddleWare = (req, res, next) => {
   if (DIR.PATH.length > 0) {
     pugPath = pugPath.replace(`/src/html${DIR.PATH}/`, '/src/html/');
   }
-  console.log("[BS] try to file "+ pugPath);
+  console.log(`[BS] try to file ${pugPath}`);
   const content = pug.renderFile(pugPath, {
     data: data,
     pretty: true,
@@ -36,7 +36,7 @@ const pugMiddleWare = (req, res, next) => {
   res.end(Buffer.from(content));
 }
 
-gulp.task("serve",()=> {
+gulp.task('serve',()=> {
   if (process.env.NODE_ENV == 'production') {
     browserSync(conf.build);
   } else {
