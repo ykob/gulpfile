@@ -98,12 +98,6 @@ module.exports.sass = {
     `!${DIR.SRC}/**/_*.{sass,scss}`
   ],
   dest: `${DIR.DEST}${DIR.PATH}/css`,
-  browsers: [
-    'last 2 versions',
-    'ie >= 11',
-    'Android >= 5',
-    'ios_saf >= 10',
-  ]
 };
 
 module.exports.replace = {
