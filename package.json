@@ -46,7 +46,6 @@
     "node-sass": "^4.9.4",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
-    "run-sequence": "^2.2.1",
     "slash": "^2.0.0",
     "vinyl-source-stream": "^2.0.0",
     "webpack": "^4.20.2",
