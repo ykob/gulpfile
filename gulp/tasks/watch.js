@@ -3,7 +3,7 @@ const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
 const $ = require('../plugins');
-const DIR = require('./gulp/conf').DIR;
+const DIR = require('../conf').DIR;
 
 gulp.task('watch', () => {
   $.watch(
