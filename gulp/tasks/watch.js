@@ -1,39 +1,42 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
-const reload = browserSync.reload;
 
 const $ = require('../plugins');
 const DIR = require('../conf').DIR;
 
+const reload = (done) => {
+  browserSync.reload();
+  done();
+};
+
 gulp.task('watch', () => {
-  $.watch(
-    [`./${DIR.SRC}/**/*.{scss,sass}`],
-    () => {
-      gulp.start(['sass'])
-    }
-  ).on('change', reload);
+  gulp.watch(
+    [
+      `./${DIR.SRC}/**/*.{scss,sass}`
+    ],
+    gulp.series('sass', reload)
+  );
 
-  $.watch(
-    [`./${DIR.SRC}/**/*.pug`]
-  ).on('change', reload);
+  gulp.watch(
+    [
+      `./${DIR.SRC}/**/*.pug`
+    ],
+    gulp.series(reload)
+  );
 
-  $.watch(
+  gulp.watch(
     [
       `./${DIR.SRC}/**/*.js`,
     ],
-    () => {
-      gulp.start(['scripts'])
-    }
-  ).on('change', reload);
+    gulp.series('scripts', reload)
+  );
 
-  $.watch(
+  gulp.watch(
     [
       `./${DIR.SRC}/img/**/*.*`,
       `./${DIR.SRC}/font/**/*.*`,
       `./${DIR.SRC}/json/**/*.*`,
     ],
-    () => {
-      gulp.start(['copyToDest'])
-    }
-  ).on('change', reload);
+    gulp.series('copyToDest', reload)
+  );
 });

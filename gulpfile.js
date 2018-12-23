@@ -8,8 +8,7 @@ requireDir('./gulp/tasks');
 gulp.task('default', gulp.series(
   'cleanDest',
   gulp.parallel('pug', 'sass', 'scripts', 'copyToDest'),
-  'serve',
-  'watch',
+  gulp.parallel('serve', 'watch'),
 ));
 
 gulp.task('build', gulp.series(
