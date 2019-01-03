@@ -43,8 +43,8 @@ module.exports.scripts = {
     `./${DIR.SRC}/**/*.js`,
   ],
   dest: {
-    development: `./${DIR.DEST}/js/`,
-    production: `./${DIR.BUILD}/js/`,
+    development: `./${DIR.DEST}${DIR.PATH}/js/`,
+    production: `./${DIR.BUILD}${DIR.PATH}/js/`,
   },
   webpack: {
     entry: `./${DIR.SRC}/js/main.js`,
