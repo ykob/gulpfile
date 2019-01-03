@@ -4,12 +4,12 @@ const $ = require('../plugins');
 const conf = require('../conf').cleanCss;
 
 gulp.task('cleanCss', () => {
-  const isProduction = process.env.NODE_ENV === 'production';
-  const dest = (isProduction) ? conf.dest.cms : conf.dest.static;
-  const rename = (isProduction)
+  const format = require('yargs').argv.format;
+  const dest = (format === 'cms') ? conf.dest.cms : conf.dest.static;
+  const rename = (format === 'cms')
     ? { basename: 'style' }
     : { suffix: '.min' };
-  if (isProduction) {
+  if (format === 'cms') {
     const reg = new RegExp(/(url)(\(\"|\(\'|\()(.*?)([img|font])(.*?)(\"\)|\'\)|\))/g);
     return gulp.src(conf.src)
       .pipe($.replace(reg, '$1$2./assets/$4$5$6'))

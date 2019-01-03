@@ -9,7 +9,8 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development gulp",
-    "build": "cross-env NODE_ENV=production gulp build"
+    "build": "cross-env NODE_ENV=production gulp build --format=static",
+    "build:cms": "cross-env NODE_ENV=production gulp build --format=cms"
   },
   "engines": {
     "node": "10.13.0"
@@ -48,7 +49,8 @@
     "slash": "^2.0.0",
     "vinyl-source-stream": "^2.0.0",
     "webpack": "^4.20.2",
-    "webpack-stream": "^5.1.1"
+    "webpack-stream": "^5.1.1",
+    "yargs": "^12.0.5"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
