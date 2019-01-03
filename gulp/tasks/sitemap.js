@@ -4,7 +4,7 @@ const $ = require('../plugins');
 const conf = require('../conf').sitemap;
 
 gulp.task('sitemap', function () {
-  gulp.src(conf.src, {
+  return gulp.src(conf.src, {
     read: false
   })
   .pipe($.sitemap(conf.opts))
