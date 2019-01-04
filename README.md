@@ -6,8 +6,8 @@ It's my asset for Web development with gulp.js.
 
 | folder name | purpose |
 | --- | --- |
-| build | `gulp build` を実行すると書き出される。<br>主に納品・公開用のファイルとして扱う。 |
-| dst | `gulp` を実行すると書き出される。<br>開発時にローカルサーバーから参照するファイル。 |
+| build | `npm run build` もしくは `npm run build:cms` を実行すると書き出される。<br>主に納品・公開用のファイルとして扱う。 |
+| dst | `npm start` を実行すると書き出される。<br>開発時にローカルサーバーから参照するファイル。 |
 | src | 開発に使用するファイル。 |
 
 ## Command
