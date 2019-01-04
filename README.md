@@ -43,7 +43,7 @@ It's my asset for Web development with gulp.js.
 
 ## License
 
-Copyright (c) 2017 Yoichi Kobayashi  
+Copyright (c) 2018 Yoichi Kobayashi  
 Released under the MIT license  
 http://opensource.org/licenses/mit-license.php
 
