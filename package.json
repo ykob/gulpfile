@@ -1,9 +1,9 @@
 {
   "name": "gulpfile",
-  "description": "",
+  "description": "It's my asset for Web development with gulp.js.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ykob/gulpfile"
+    "url": "https://github.com/ykob/gulpfile.git"
   },
   "private": false,
   "scripts": {
