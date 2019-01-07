@@ -6,7 +6,7 @@ const $ = require('../plugins');
 const conf = require('../conf').imagemin;
 
 gulp.task('imagemin', () => {
-  const dest = (process.env.NODE_ENV === 'production') ? conf.dest.cms : conf.dest.static;
+  const dest = (require('yargs').argv.format === 'cms') ? conf.dest.cms : conf.dest.static;
   return gulp.src(conf.src)
     .pipe($.imagemin(
       [
