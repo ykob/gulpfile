@@ -10,7 +10,7 @@ gulp.task('cleanCss', () => {
     ? { basename: 'style' }
     : { suffix: '.min' };
   if (format === 'cms') {
-    const reg = new RegExp(/(url)(\(\"|\(\'|\()(.*?)([img|font])(.*?)(\"\)|\'\)|\))/g);
+    const reg = new RegExp(/(url)(\(\"|\(\'|\()(?!.*http)(.*?)(img|font)(.*?)(\"\)|\'\)|\))/g);
     return gulp.src(conf.src)
       .pipe($.replace(reg, '$1$2./assets/$4$5$6'))
       .pipe($.cleanCss())
