@@ -144,7 +144,7 @@ module.exports.copy = {
       cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets`,
     },
     opts: {
-      base: `${DIR.DEST}`
+      base: `${DIR.DEST}${DIR.PATH}`
     }
   },
   php: {
