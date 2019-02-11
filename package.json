@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "easing-js": "^1.1.2",
+    "easing-js": "git://github.com/danro/easing-js.git",
     "js-util": "git://github.com/ykob/js-util.git",
     "jstransformer-markdown-it": "^2.0.0",
     "ua-parser-js": "^0.7.19"
