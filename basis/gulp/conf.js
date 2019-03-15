@@ -5,7 +5,6 @@ const DOMAIN = module.exports.DOMAIN = 'http://www.xxx.com';
 const DIR = module.exports.DIR =  {
    // 語尾にスラッシュはつけない
   PATH: '',
-  CMS: '/cms/wp-content/themes/xxx.com',
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'build'
@@ -44,10 +43,7 @@ module.exports.scripts = {
   ],
   dest: {
     development: `./${DIR.DEST}${DIR.PATH}/js`,
-    production: {
-      static: `./${DIR.BUILD}${DIR.PATH}/js`,
-      cms: `./${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/js`,
-    },
+    production: `./${DIR.BUILD}${DIR.PATH}/js`,
   },
   webpack: {
     entry: `./${DIR.SRC}/js/main.js`,
@@ -114,10 +110,7 @@ module.exports.replace = {
 
 module.exports.cleanCss = {
   src: `${DIR.DEST}${DIR.PATH}/css/main.css`,
-  dest: {
-    static: `${DIR.BUILD}${DIR.PATH}/css`,
-    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}`,
-  },
+  dest: `${DIR.BUILD}${DIR.PATH}/css`,
 };
 
 module.exports.copy = {
@@ -139,10 +132,7 @@ module.exports.copy = {
       `${DIR.DEST}${DIR.PATH}/font/**/*.*`,
       `${DIR.DEST}${DIR.PATH}/json/**/*.*`,
     ],
-    dest: {
-      static: `${DIR.BUILD}${DIR.PATH}`,
-      cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets`,
-    },
+    dest: `${DIR.BUILD}${DIR.PATH}`,
     opts: {
       base: `${DIR.DEST}${DIR.PATH}`
     }
@@ -151,24 +141,11 @@ module.exports.copy = {
     src: [
       `${DIR.SRC}/html/**/*.php`,
     ],
-    dest: {
-      static: `${DIR.BUILD}${DIR.PATH}`,
-      cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/php`,
-    },
+    dest: `${DIR.BUILD}${DIR.PATH}`,
     opts: {
       base: `${DIR.SRC}/html/`
     }
   },
-  cms: {
-    src: [
-      `${DIR.SRC}/wp-theme/**/*.php`,
-      `${DIR.SRC}/wp-theme/**/screenshot.png`,
-    ],
-    dest: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}`,
-    opts: {
-      base: `${DIR.SRC}/wp-theme/`
-    }
-  }
 };
 
 module.exports.imagemin = {
@@ -176,10 +153,7 @@ module.exports.imagemin = {
     `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`,
     `!${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
   ],
-  dest: {
-    static: `${DIR.BUILD}${DIR.PATH}/img`,
-    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/img`,
-  },
+  dest: `${DIR.BUILD}${DIR.PATH}/img`,
   opts: {
     pngquant: {
       quality: 80,
