@@ -1,0 +1,64 @@
+$count: $count;
+
+.u-p {
+  &-t {
+    @for $i from 0 through $count {
+      &-#{$i * 5} {
+        @include l-more-than-mobile {
+          padding-top: floor(($i * 5) * 1px);
+        }
+        @include l-mobile {
+          padding-top: floor(($i * 3.33) * 1px);
+        }
+      }
+    }
+    &-a {
+      padding-top: auto;
+    }
+  }
+  &-b {
+    @for $i from 0 through $count {
+      &-#{$i * 5} {
+        @include l-more-than-mobile {
+          padding-bottom: floor(($i * 5) * 1px);
+        }
+        @include l-mobile {
+          padding-bottom: floor(($i * 3.33) * 1px);
+        }
+      }
+    }
+    &-a {
+      padding-bottom: auto;
+    }
+  }
+  &-r {
+    @for $i from 0 through $count {
+      &-#{$i * 5} {
+        @include l-more-than-mobile {
+          padding-right: floor(($i * 5) * 1px);
+        }
+        @include l-mobile {
+          padding-right: floor(($i * 3.33) * 1px);
+        }
+      }
+    }
+    &-a {
+      padding-right: auto;
+    }
+  }
+  &-l {
+    @for $i from 0 through $count {
+      &-#{$i * 5} {
+        @include l-more-than-mobile {
+          padding-left: floor(($i * 5) * 1px);
+        }
+        @include l-mobile {
+          padding-left: floor(($i * 3.33) * 1px);
+        }
+      }
+    }
+    &-a {
+      padding-left: auto;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.c-content-wordpress {
+  h2, h3, h4, h5, h6 {
+    margin-top: 3rem;
+    margin-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h2 {
+    @include fontSizeAll(18, 18, 14);
+  }
+  h3 {
+    @include fontSizeAll(16, 16, 13);
+  }
+  h4 {
+    @include fontSizeAll(14, 14, 12);
+  }
+  h5 {
+    @include fontSizeAll(14, 14, 12);
+  }
+  h6 {
+    @include fontSizeAll(14, 14, 12);
+  }
+  p, ul, ol, dl, table {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  table {
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .wp-caption {
+    width: auto !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    img {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .wp-caption-text {
+    margin-top: 1rem;
+    @include fontSizeAll(11, 11, 9);
+  }
+}

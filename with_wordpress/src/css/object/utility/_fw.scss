@@ -1,0 +1,7 @@
+.u-fw {
+  @for $i from 1 through 7 {
+    &-#{$i} {
+      font-weight: $i * 100;
+    }
+  }
+}

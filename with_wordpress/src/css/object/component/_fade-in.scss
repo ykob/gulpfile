@@ -1,0 +1,24 @@
+.c-fade-in {
+  opacity: 0;
+  backface-visibility: hidden;
+  &.is-shown {
+    opacity: 1;
+    transition-duration: .8s;
+    transition-delay: .3s;
+    transition-timing-function: $easeOutCirc;
+    transition-property: opacity;
+  }
+  @for $i from 1 through 10 {
+    &--#{str-slice('00' + $i, -2)}.is-shown {
+      transition-delay: ($i - 1) * .1 + .3s;
+    }
+  }
+  .is-leaved-content & {
+    opacity: 0;
+    @for $i from 1 through 10 {
+      &--#{str-slice('00' + $i, -2)} {
+        transition-delay: ($i - 1) * .04s;
+      }
+    }
+  }
+}

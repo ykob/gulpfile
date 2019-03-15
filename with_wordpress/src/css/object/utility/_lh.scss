@@ -1,0 +1,7 @@
+.u-lh {
+  @for $i from 100 through 300 {
+    &-#{$i} {
+      line-height: $i / 100;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3D(0, 30px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3D(0, 0, 0);
+  }
+}
+@keyframes fadeInUpMobile {
+  0% {
+    opacity: 0;
+    transform: translate3D(0, 15px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3D(0, 0, 0);
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translate3D(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3D(0, -20px, 0);
+  }
+}
+@keyframes fadeOutUpMobile {
+  0% {
+    opacity: 1;
+    transform: translate3D(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3D(0, -10px, 0);
+  }
+}
+
+.c-fade-in-up {
+  opacity: 0;
+  backface-visibility: hidden;
+  &.is-shown {
+    animation-duration: 1.2s;
+    animation-timing-function: $easeOutCirc;
+    animation-fill-mode: both;
+    @include l-more-than-mobile {
+      animation-name: fadeInUp;
+    }
+    @include l-mobile {
+      animation-name: fadeInUpMobile;
+    }
+  }
+  @for $i from 1 through 10 {
+    &--#{str-slice('00' + $i, -2)}.is-shown {
+      animation-delay: ($i - 1) * .1 + .3s;
+    }
+  }
+  .is-leaved-content & {
+    opacity: 0;
+    animation-duration: .8s;
+    @include l-more-than-mobile {
+      animation-name: fadeOutUp;
+    }
+    @include l-mobile {
+      animation-name: fadeOutUpMobile;
+    }
+    @for $i from 1 through 10 {
+      &--#{str-slice('00' + $i, -2)} {
+        animation-delay: ($i - 1) * .04s;
+      }
+    }
+  }
+}

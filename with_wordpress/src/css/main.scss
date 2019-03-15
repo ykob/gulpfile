@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/*!
+Theme Name: www.xxx.com
+Author: tsumikiinc.com
+Description:
+Version: 1.0.0
+*/
+
+// @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+@import "foundation/_variables";
+@import "foundation/_variables-easings";
+@import "foundation/_keyframes";
+
+// Mixins
+@import "foundation/_mixin-utils";
+
+// Base
+@import "foundation/_normalize";
+@import "foundation/_global";
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+@import "layout/_contents";
+@import "layout/_gf";
+@import "layout/_gh";
+@import "layout/_page";
+
+// ==========================================================================
+// Object
+// ==========================================================================
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+@import "object/component/_content-wordpress";
+@import "object/component/_fade-in-up";
+@import "object/component/_fade-in";
+@import "object/component/_img-wide";
+@import "object/component/_split-str";
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+// @import "object/project/_xxx";
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+@import "object/utility/_animdel";
+@import "object/utility/_cur";
+@import "object/utility/_d";
+@import "object/utility/_dn";
+@import "object/utility/_ff";
+@import "object/utility/_fs";
+@import "object/utility/_fw";
+@import "object/utility/_fz";
+@import "object/utility/_lh";
+@import "object/utility/_m";
+@import "object/utility/_no-selection";
+@import "object/utility/_p";
+@import "object/utility/_ta";
+@import "object/utility/_trsde";
+@import "object/utility/_tt";
+@import "object/utility/_whs";
+
+// -----------------------------------------------------------------
+// Vendor
+// -----------------------------------------------------------------
+// @import "object/vendor/_xxx";
