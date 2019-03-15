@@ -17,7 +17,6 @@ gulp.task('build', gulp.series(
   'cleanBuild',
   gulp.parallel('replaceHtml', 'cleanCss', 'scripts', 'imagemin'),
   gulp.parallel('copyToBuild', 'copyPhpToBuild', 'copyCmsToBuild'),
-  'sitemap',
 ));
 
 gulp.task('buildHtml', gulp.series(
