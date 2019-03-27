@@ -11,3 +11,60 @@ http://opensource.org/licenses/mit-license.php
 ## Misc
 
 Follow Yoichi Kobayashi: [Web](http://www.tplh.net/), [Twitter](https://twitter.com/ykob0123)
+
+## Options
+
+### Vueを使用する場合
+
+以下のnpm modulesを追加する。
+
+    npm i vue-loader vue-style-loader vue-template-compiler pug-plain-loader css-loader sass-loader --save-dev
+
+`gulp/conf.js` 上で `VueLoaderPlugin` を読み込む。
+
+    const { VueLoaderPlugin } = require('vue-loader');
+
+webpackのconfigに以下を追加する。
+
+    module: {
+      rules: [
+        {
+          test: /\.vue$/,
+          loader: 'vue-loader'
+        },
+        {
+          test: /\.pug$/,
+          loader: 'pug-plain-loader'
+        },
+        {
+          test: /\.scss/,
+          use: [
+            'vue-style-loader',
+            'css-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+              }
+            }
+          ]
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          },
+        }
+      ]
+    },
+    resolve: {
+      alias: {
+        vue: 'vue/dist/vue.common.js'
+      }
+    },
+    plugins: [
+      new VueLoaderPlugin()
+    ],
