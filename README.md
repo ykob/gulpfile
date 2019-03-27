@@ -24,7 +24,8 @@ Follow Yoichi Kobayashi: [Web](http://www.tplh.net/), [Twitter](https://twitter.
 
     const { VueLoaderPlugin } = require('vue-loader');
 
-webpackのconfigに以下を追加する。
+webpackのconfigに以下を追加する。  
+Vue Componentにはpugとscssを使用する想定の構成になっている。
 
     module: {
       rules: [
