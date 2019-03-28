@@ -182,7 +182,7 @@ module.exports.imagemin = {
   },
   opts: {
     pngquant: {
-      quality: 80,
+      quality: [0.6, 0.8],
       speed: 1,
     },
     mozjpeg: {
