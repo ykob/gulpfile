@@ -69,3 +69,47 @@ Vue Componentにはpugとscssを使用する想定の構成になっている。
     plugins: [
       new VueLoaderPlugin()
     ],
+
+### WebGLを使用する場合
+
+以下のnpm modulesを追加する。
+
+    npm i glslify-import-loader glslify-loader raw-loader --save-dev
+
+webpackのconfigに以下を追加する。  
+
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          },
+        },
+        {
+          test: /\.(glsl|fs|vs)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'glslify-import-loader',
+          }
+        },
+        {
+          test: /\.(glsl|fs|vs)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'raw-loader',
+          }
+        },
+        {
+          test: /\.(glsl|fs|vs)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'glslify-loader',
+          }
+        }
+      ]
+    }
