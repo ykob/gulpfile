@@ -19,8 +19,8 @@ const getPugTemplatePath = (baseDir, req)=>{
 const pugMiddleWare = (req, res, next) => {
   const requestPath = getPugTemplatePath(process.cwd(), req);
   const data = JSON.parse(fs.readFileSync(confPug.json));
-  data.meta.domain = confPug.domain;
-  data.meta.path = confPug.path;
+  data.meta.domain = DOMAIN;
+  data.meta.path = DIR.PATH;
   if (path.parse(requestPath).ext !== '.html') {
     return next();
   }

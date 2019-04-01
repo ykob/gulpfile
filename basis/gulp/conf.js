@@ -86,8 +86,6 @@ module.exports.pug = {
     pretty: true
   },
   json: `${DIR.SRC}/data.json`,
-  domain: `${DOMAIN}`,
-  path: `${DIR.PATH}`,
 };
 
 module.exports.sass = {
