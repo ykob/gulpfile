@@ -18,7 +18,7 @@ Follow Yoichi Kobayashi: [Web](http://www.tplh.net/), [Twitter](https://twitter.
 
 以下のnpm modulesを追加する。
 
-    npm i vue-loader vue-style-loader vue-template-compiler pug-plain-loader css-loader sass-loader --save-dev
+    npm i vue vue-loader vue-style-loader vue-template-compiler pug-plain-loader css-loader sass-loader --save-dev
 
 `gulp/conf.js` 上で `VueLoaderPlugin` を読み込む。
 
