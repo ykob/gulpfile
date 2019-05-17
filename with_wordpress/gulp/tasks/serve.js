@@ -6,6 +6,7 @@ const fs = require('fs');
 const url = require("url");
 const pug = require('pug');
 
+const DOMAIN = require('../conf').DOMAIN;
 const DIR = require('../conf').DIR;
 const conf = require('../conf').serve;
 const confPug = require('../conf').pug;
