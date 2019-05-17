@@ -50,9 +50,11 @@ module.exports.scripts = {
     },
   },
   webpack: {
-    entry: `./${DIR.SRC}/js/main.js`,
+    entry: {
+      main: `./${DIR.SRC}/js/main.js`,
+    },
     output: {
-      filename: `main.js`
+      filename: `[name].js`
     },
     module: {
       rules: [
