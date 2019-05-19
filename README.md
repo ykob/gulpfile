@@ -1,6 +1,7 @@
 # gulpfile
 
-It's my asset for Web development with gulp.js.
+It's an asset to develop a website with Gulp.  
+https://gulpjs.com/
 
 ## License
 
