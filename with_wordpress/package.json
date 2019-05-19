@@ -1,6 +1,6 @@
 {
   "name": "gulpfile",
-  "description": "It's an asset to develop a website with Gulp.",
+  "description": "The asset to develop a website with Gulp.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ykob/gulpfile.git"
