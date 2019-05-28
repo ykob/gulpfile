@@ -1,7 +1,7 @@
 // 設定ファイル
 // 対象パスやオプションを指定
 
-const DOMAIN = module.exports.DOMAIN = 'http://www.xxx.com';
+const DOMAIN = module.exports.DOMAIN = 'https://www.tplh.net';
 const DIR = module.exports.DIR =  {
    // 語尾にスラッシュはつけない
   PATH: '',
