@@ -26,7 +26,7 @@ gulp.task('watch', () => {
 
   gulp.watch(
     [
-      `./${DIR.SRC}/**/*.{js,vs,fs,glsl}`,
+      `./${DIR.SRC}/**/*.{js,vue,vs,fs,glsl}`,
     ],
     gulp.series('scripts', reload)
   );
