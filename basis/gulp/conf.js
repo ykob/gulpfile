@@ -37,6 +37,7 @@ module.exports.serve = {
   }
 };
 
+const { DefinePlugin } = require('webpack');
 module.exports.scripts = {
   src: [
     `./${DIR.SRC}/**/*.js`,
@@ -65,7 +66,12 @@ module.exports.scripts = {
           },
         }
       ]
-    }
+    },
+    plugins: [
+      new DefinePlugin({
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      }),
+    ],
   },
 };
 
