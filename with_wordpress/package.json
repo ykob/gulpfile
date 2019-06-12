@@ -13,7 +13,7 @@
     "build:cms": "cross-env NODE_ENV=production gulp build --format=cms"
   },
   "engines": {
-    "node": "10.13.0"
+    "node": "10.16.0"
   },
   "browserslist": [
     "last 2 version",
