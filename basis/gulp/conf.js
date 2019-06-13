@@ -9,7 +9,7 @@ const DIR = module.exports.DIR =  {
   DEST: 'dst',
   BUILD: 'build'
 };
-const WEBPACK_CONST = {
+const WEBPACK_CONFIG = {
   NODE_ENV: JSON.stringify(process.env.NODE_ENV),
 };
 
@@ -71,7 +71,7 @@ module.exports.scripts = {
       ]
     },
     plugins: [
-      new DefinePlugin(WEBPACK_CONST),
+      new DefinePlugin(WEBPACK_CONFIG),
     ],
   },
 };
