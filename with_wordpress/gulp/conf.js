@@ -10,6 +10,9 @@ const DIR = module.exports.DIR =  {
   DEST: 'dst',
   BUILD: 'build'
 };
+const WEBPACK_CONST = {
+  NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+};
 
 module.exports.serve = {
   dest: {
@@ -72,9 +75,7 @@ module.exports.scripts = {
       ]
     },
     plugins: [
-      new DefinePlugin({
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      }),
+      new DefinePlugin(WEBPACK_CONST),
     ],
   },
 };
