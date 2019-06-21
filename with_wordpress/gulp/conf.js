@@ -1,6 +1,7 @@
 // 設定ファイル
 // 対象パスやオプションを指定
 
+const ARGV = require('yargs').argv;
 const DOMAIN = module.exports.DOMAIN = 'https://www.tplh.net';
 const DIR = module.exports.DIR =  {
    // 語尾にスラッシュはつけない
@@ -12,6 +13,7 @@ const DIR = module.exports.DIR =  {
 };
 const WEBPACK_CONFIG = {
   NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+  SUB_DIR: (ARGV.format === 'format') ? `${DIR.PATH}${DIR.CMS}/assets` : `${DIR.PATH}`,
 };
 
 module.exports.serve = {
