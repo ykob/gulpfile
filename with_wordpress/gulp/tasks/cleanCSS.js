@@ -1,10 +1,11 @@
 const gulp = require('gulp');
 
 const $ = require('../plugins');
+const ARGV = require('yargs').argv;
 const conf = require('../conf').cleanCss;
 
 gulp.task('cleanCss', () => {
-  const format = require('yargs').argv.format;
+  const format = ARGV.format;
   const dest = (format === 'cms') ? conf.dest.cms : conf.dest.static;
   const rename = (format === 'cms')
     ? { basename: 'style' }

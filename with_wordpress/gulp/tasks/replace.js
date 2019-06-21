@@ -2,10 +2,11 @@ const gulp = require('gulp');
 
 const $ = require('../plugins');
 const DIR = require('../conf').DIR;
+const ARGV = require('yargs').argv;
 const conf = require('../conf').replace;
 
 gulp.task('replaceHtml', () => {
-  if (require('yargs').argv.format === 'cms') {
+  if (ARGV.format === 'cms') {
     return gulp.src('.');
   } else {
     const regJs = new RegExp(`(src="${DIR.PATH}\/js\/)([a-z0-9_\.\-]*)(\.js")`);

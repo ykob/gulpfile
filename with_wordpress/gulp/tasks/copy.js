@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 
+const ARGV = require('yargs').argv;
 const conf = require('../conf').copy;
 
 gulp.task('copyToDest', () => {
@@ -8,13 +9,13 @@ gulp.task('copyToDest', () => {
 });
 
 gulp.task('copyToBuild', () => {
-  const dest = (require('yargs').argv.format === 'cms') ? conf.build.dest.cms : conf.build.dest.static;
+  const dest = (ARGV.format === 'cms') ? conf.build.dest.cms : conf.build.dest.static;
   return gulp.src(conf.build.src, conf.build.opts)
     .pipe(gulp.dest(dest));
 });
 
 gulp.task('copyPhpToBuild', () => {
-  const dest = (require('yargs').argv.format === 'cms') ? conf.php.dest.cms : conf.php.dest.static;
+  const dest = (ARGV.format === 'cms') ? conf.php.dest.cms : conf.php.dest.static;
   return gulp.src(conf.php.src, conf.php.opts)
     .pipe(gulp.dest(dest));
 });

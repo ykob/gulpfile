@@ -3,10 +3,11 @@ const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
 
 const $ = require('../plugins');
+const ARGV = require('yargs').argv;
 const conf = require('../conf').imagemin;
 
 gulp.task('imagemin', () => {
-  const dest = (require('yargs').argv.format === 'cms') ? conf.dest.cms : conf.dest.static;
+  const dest = (ARGV.format === 'cms') ? conf.dest.cms : conf.dest.static;
   return gulp.src(conf.src)
     .pipe($.imagemin(
       [

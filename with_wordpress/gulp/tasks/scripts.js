@@ -4,6 +4,7 @@ const webpack = require("webpack");
 
 const $ = require('../plugins');
 const DIR = require('../conf').DIR;
+const ARGV = require('yargs').argv;
 const conf = require('../conf').scripts;
 
 const webpackError = function() {
@@ -18,7 +19,7 @@ gulp.task('scripts', () => {
       .on('error', webpackError)
       .pipe(gulp.dest(conf.dest[conf.webpack.mode]));
   } else {
-    const dest = (require('yargs').argv.format === 'cms')
+    const dest = (ARGV.format === 'cms')
       ? conf.dest.production.cms
       : conf.dest.production.static;
     return webpackStream(conf.webpack, webpack)
