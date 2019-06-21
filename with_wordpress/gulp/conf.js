@@ -5,7 +5,7 @@ const DOMAIN = module.exports.DOMAIN = 'https://www.tplh.net';
 const DIR = module.exports.DIR =  {
    // 語尾にスラッシュはつけない
   PATH: '',
-  CMS: '/cms/wp-content/themes/xxx.com',
+  CMS: '/cms/wp-content/themes/tplh.net',
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'build'
