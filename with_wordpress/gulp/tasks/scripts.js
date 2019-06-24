@@ -13,7 +13,7 @@ const webpackError = function() {
 
 gulp.task('scripts', () => {
   conf.webpack.mode = process.env.NODE_ENV;
-  if (conf.webpack.mode == 'development') {
+  if (process.env.NODE_ENV == 'development') {
     return gulp.src(conf.src)
       .pipe(webpackStream(conf.webpack, webpack))
       .on('error', webpackError)
