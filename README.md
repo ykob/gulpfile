@@ -19,7 +19,7 @@ Follow Yoichi Kobayashi: [Web](http://www.tplh.net/), [Twitter](https://twitter.
 
 以下のnpm modulesを追加する。
 
-    npm i vue vue-loader vue-style-loader vue-template-compiler pug-plain-loader css-loader sass-loader --save-dev
+    npm i vue vue-loader vue-style-loader vue-template-compiler pug-plain-loader css-loader sass-loader sass-resources-loader --save-dev
 
 `gulp/conf.js` 上で `VueLoaderPlugin` を読み込む。
 
@@ -28,48 +28,70 @@ Follow Yoichi Kobayashi: [Web](http://www.tplh.net/), [Twitter](https://twitter.
 webpackのconfigに以下を追加する。  
 Vue Componentにはpugとscssを使用する想定の構成になっている。
 
-    module: {
-      rules: [
+```
+module: {
+  rules: [
+    {
+      test: /\.vue$/,
+      loader: 'vue-loader'
+    },
+    {
+      test: /\.pug$/,
+      loader: 'pug-plain-loader'
+    },
+    {
+      test: /\.scss/,
+      use: [
+        'vue-style-loader',
+        'css-loader',
         {
-          test: /\.vue$/,
-          loader: 'vue-loader'
-        },
-        {
-          test: /\.pug$/,
-          loader: 'pug-plain-loader'
-        },
-        {
-          test: /\.scss/,
-          use: [
-            'vue-style-loader',
-            'css-loader',
-            {
-              loader: 'sass-loader',
-              options: {
+          loader: 'sass-loader',
+          options: {
+            sassOptions: {
+              importLoaders: 0,
+              alias: {
+                'assets': path.resolve(__dirname, '../src')
               }
             }
-          ]
+          }
         },
         {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env']
-            }
-          },
+          loader: 'sass-resources-loader',
+          options: {
+            resources: [
+              path.resolve(__dirname, '../src/css/foundation/_variables'),
+              path.resolve(__dirname, '../src/css/foundation/_variables-easings'),
+              path.resolve(__dirname, '../src/css/foundation/_keyframes'),
+              path.resolve(__dirname, '../src/css/foundation/_functions'),
+              path.resolve(__dirname, '../src/css/foundation/_mixin-utils'),
+              path.resolve(__dirname, '../src/css/foundation/_normalize'),
+              path.resolve(__dirname, '../src/css/foundation/_global'),
+            ]
+          }
         }
       ]
     },
-    resolve: {
-      alias: {
-        vue: 'vue/dist/vue.common.js'
-      }
-    },
-    plugins: [
-      new VueLoaderPlugin()
-    ],
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      },
+    }
+  ]
+},
+resolve: {
+  alias: {
+    vue: 'vue/dist/vue.common.js'
+  }
+},
+plugins: [
+  new VueLoaderPlugin()
+],
+```
 
 ### WebGLを使用する場合
 
