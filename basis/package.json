@@ -12,7 +12,7 @@
     "build": "cross-env NODE_ENV=production gulp build --format=static"
   },
   "engines": {
-    "node": "10.16.0"
+    "node": "14.16.0"
   },
   "browserslist": [
     "last 2 version",
